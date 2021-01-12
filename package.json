@@ -1,0 +1,16 @@
+{
+  "name": "telegramboloscarbot",
+  "version": "1.0.0",
+  "description": "Bot de telegram para um bolao do oscar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "@GuedsLucas e @Lvolcov",
+  "license": "ISC",
+  "dependencies": {
+    "custom-env": "^2.0.1",
+    "telegraf": "^4.0.0"
+  }
+}

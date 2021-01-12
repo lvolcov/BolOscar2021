@@ -1,0 +1,29 @@
+{
+    "update": {
+      "update_id": 480186298,
+      "callback_query": {
+        "id": '2778971203279996360',
+        "chat_instance": '1290692697582290172',
+      }
+    },
+    "tg": "Telegram" {
+      "token": '1584263107:AAHsNPshaIM-zQV04WQl6Y15mqThDx81eV0',
+      "response": undefined,
+      "options": {
+        "apiRoot": 'https://api.telegram.org',
+        "webhookReply": true,
+        "agent": [Agent],
+        "attachmentAgent": undefined
+      }
+    },
+    "botInfo": {
+      "id": 1584263107,
+      "is_bot": true,
+      "first_name": "Bol'Oscar 2021",
+      "username": 'BolOscar2021_bot',
+      "can_join_groups": false,
+      "can_read_all_group_messages": false,
+      "supports_inline_queries": false
+    },
+    "state": {}
+  }
