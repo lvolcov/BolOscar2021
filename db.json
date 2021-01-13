@@ -1,628 +1,668 @@
 {
-    "categorias": {
-        "filme" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+  "categorias": {
+      "catFilme" : {
+        "nomeCompleto" : "Melhor Filme",
+        "nomeMenu" : "Filme",
+        "nomeResumido" : "catFilme",
+        "indicados" : {
+          "indFilFord" : {
+            "nomeCompleto" : "Ford vs Ferrari",
+            "nomeResumido" : "indFilFord"
+          },
+          "indFilIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indFilIrlandes"
+          },
+          "indFilJojo" : {
+            "nomeCompleto" : "Jojo Rabbit",
+            "nomeResumido" : "indFilJojo"
+          },
+          "indFilCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indFilCoringa"
+          },
+          "indFilAdoraveis" : {
+            "nomeCompleto" : "Adoráveis Mulheres",
+            "nomeResumido" : "indFilAdoraveis"
+          },
+          "indFilCasamento" : {
+            "nomeCompleto" : "História de um Casamento",
+            "nomeResumido" : "indFilCasamento"
+          },
+          "indFil1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indFil1917"
+          },
+          "indFilHollywood" : {
+            "nomeCompleto" : "Era uma vez em... Hollywood",
+            "nomeResumido" : "indFilHollywood"
+          },
+          "indFilParasita" : {
+            "nomeCompleto" : "Parasita",
+            "nomeResumido" : "indFilParasita"
           }
-        },
-        "diretor" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catDirecao" : {
+        "nomeCompleto" : "Melhor Direção",
+        "nomeMenu" : "Direção",
+        "nomeResumido" : "catDirecao",
+        "indicados" : {
+          "indDirScorcese" : {
+            "nomeCompleto" : "Martin Scorsese - O Irlandês",
+            "nomeResumido" : "indDirScorcese"
+          },
+          "indDirTodd" : {
+            "nomeCompleto" : "Todd Phillips - Coringa",
+            "nomeResumido" : "indDirTodd"
+          },
+          "indDirSam" : {
+            "nomeCompleto" : "Sam Mendes - 1917",
+            "nomeResumido" : "indDirSam"
+          },
+          "indDirTarantino" : {
+            "nomeCompleto" : "Quentin Tarantino - Era uma vez em... Hollywood",
+            "nomeResumido" : "indDirTarantino"
+          },
+          "indDirBong" : {
+            "nomeCompleto" : "Bong Joon Ho - Parasita",
+            "nomeResumido" : "indDirBong"
           }
-        },
-        "fotografia" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catFotografia" : {
+        "nomeCompleto" : "Melhor Fotografia",
+        "nomeMenu" : "Dir. Fotografia",
+        "nomeResumido" : "catFotografia",
+        "indicados" : {
+          "indFotIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indFotIrlandes"
+          },
+          "indFotCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indFotCoringa"
+          },
+          "indFotFarol" : {
+            "nomeCompleto" : "O Farol",
+            "nomeResumido" : "indFotFarol"
+          },
+          "indFot1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indFot1917"
+          },
+          "indFotHollywood" : {
+            "nomeCompleto" : "Era uma vez em... Hollywood",
+            "nomeResumido" : "indFotHollywood"
           }
-        },
-        "arte" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catArte" : {
+        "nomeCompleto" : "Melhor Design de Produção",
+        "nomeMenu" : "Dir. Arte",
+        "nomeResumido" : "catArte",
+        "indicados" : {
+          "indArtIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indArtIrlandes"
+          },
+          "indArtJojo" : {
+            "nomeCompleto" : "JoJo Rabbit",
+            "nomeResumido" : "indArtJojo"
+          },
+          "indArt1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indArt1917"
+          },
+          "indArtHollywood" : {
+            "nomeCompleto" : "Era uma vez em.. Hollywood",
+            "nomeResumido" : "indArtHollywood"
+          },
+          "indArtParasita" : {
+            "nomeCompleto" : "Parasita",
+            "nomeResumido" : "indArtParasita"
           }
-        },
-        "rotAdapt" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catrotAdapt" : {
+        "nomeCompleto" : "Melhor Roteiro Adaptado",
+        "nomeMenu" : "Roteiro Adaptado",
+        "nomeResumido" : "catrotAdapt",
+        "indicados" : {
+          "indRadIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indRadIrlandes"
+          },
+          "indRadJojo" : {
+            "nomeCompleto" : "JoJo Rabbit",
+            "nomeResumido" : "indRadJojo"
+          },
+          "indRadCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indRadCoringa"
+          },
+          "indRadAdoraveis" : {
+            "nomeCompleto" : "Adoráveis Mulheres",
+            "nomeResumido" : "indRadAdoraveis"
+          },
+          "indRadPapa" : {
+            "nomeCompleto" : "Dois Papas",
+            "nomeResumido" : "indRadPapa"
           }
-        },
-        "rotOrig" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catrotOrig" : {
+        "nomeCompleto" : "Melhor Roteiro Original",
+        "nomeMenu" : "Roteiro Original",
+        "nomeResumido" : "catrotOrig",
+        "indicados" : {
+          "indRorFacas" : {
+            "nomeCompleto" : "Entre facas e segredos",
+            "nomeResumido" : "indRorFacas"
+          },
+          "indRorCasamento" : {
+            "nomeCompleto" : "História de um Casamento",
+            "nomeResumido" : "indRorCasamento"
+          },
+          "indRor1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indRor1917"
+          },
+          "indRorHollywood" : {
+            "nomeCompleto" : "Era uma vez em... Hollywood",
+            "nomeResumido" : "indRorHollywood"
+          },
+          "indRorParasita" : {
+            "nomeCompleto" : "Parasita",
+            "nomeResumido" : "indRorParasita"
           }
-        },
-        "atrizPrincipal" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAtriz" : {
+        "nomeCompleto" : "Melhor Atriz",
+        "nomeMenu" : "Atriz",
+        "nomeResumido" : "catAtriz",
+        "indicados" : {
+          "indAtzCynthia" : {
+            "nomeCompleto" : "Cythia Erivo - Harriet",
+            "nomeResumido" : "indAtzCynthia"
+          },
+          "indAtzScarlett" : {
+            "nomeCompleto" : "Scarlett Johansson - História de um Casamento",
+            "nomeResumido" : "indAtzScarlett"
+          },
+          "indAtzSaoirse" : {
+            "nomeCompleto" : "Saoirse Ronan - Adoráveis Mulheres",
+            "nomeResumido" : "indAtzSaoirse"
+          },
+          "indAtzTheron" : {
+            "nomeCompleto" : "Charlize Theron - O Escândalo",
+            "nomeResumido" : "indAtzTheron"
+          },
+          "indAtzRenee" : {
+            "nomeCompleto" : "Renée Zellweger - Judy",
+            "nomeResumido" : "indAtzRenee"
           }
-        },
-        "atorPrincipal" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAtor" : {
+        "nomeCompleto" : "Melhor Ator",
+        "nomeMenu" : "Ator",
+        "nomeResumido" : "catAtor",
+        "indicados" : {
+          "indAtrBanderas" : {
+            "nomeCompleto" : "Antonio Banderas - Dor e Glória",
+            "nomeResumido" : "indAtrBanderas"
+          },
+          "indAtrDicaprio" : {
+            "nomeCompleto" : "Leonardo DiCaprio - Era uma vez em... Hollwood",
+            "nomeResumido" : "indAtrDicaprio"
+          },
+          "indAtrDriver" : {
+            "nomeCompleto" : "Adam Driver - História de um Casamento",
+            "nomeResumido" : "indAtrDriver"
+          },
+          "indAtrPhoenix" : {
+            "nomeCompleto" : "Joaquin Phoenix - Coringa",
+            "nomeResumido" : "indAtrPhoenix"
+          },
+          "indAtrPrice" : {
+            "nomeCompleto" : "Jonathan Price - Dois Papas",
+            "nomeResumido" : "indAtrPrice"
           }
-        },
-        "atrizCoadjuvante" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAtrizCoad" : {
+        "nomeCompleto" : "Melhor Atriz Coadjuvante",
+        "nomeMenu" : "Atriz Coadjuvante",
+        "nomeResumido" : "catAtrizCoad",
+        "indicados" : {
+          "indAzcKathy" : {
+            "nomeCompleto" : "Kathy Bates - O Caso Richard Jewell",
+            "nomeResumido" : "indAzcKathy"
+          },
+          "indAzcDern" : {
+            "nomeCompleto" : "Laura Dern - História de um Casamento",
+            "nomeResumido" : "indAzcDern"
+          },
+          "indAzcScarlett" : {
+            "nomeCompleto" : "Scarlett Johansson - JoJo Rabbit",
+            "nomeResumido" : "indAzcScarlett"
+          },
+          "indAzcPugh" : {
+            "nomeCompleto" : "Florence Pugh - Adoráveis Mulheres",
+            "nomeResumido" : "indAzcPugh"
+          },
+          "indAzcMargot" : {
+            "nomeCompleto" : "Margot Robbie - O Escândalo",
+            "nomeResumido" : "indAzcMargot"
           }
-        },
-        "atorCoadjuvante" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAtorCoad" : {
+        "nomeCompleto" : "Melhor Ator Coadjuvante",
+        "nomeMenu" : "Ator Coadjuvante",
+        "nomeResumido" : "catAtorCoad",
+        "indicados" : {
+          "indArcHanks" : {
+            "nomeCompleto" : "Tom Hanks - Um lindo dia na vizinhança",
+            "nomeResumido" : "indArcHanks"
+          },
+          "indArcHopkins" : {
+            "nomeCompleto" : "Anthony Hopkins - Dois Papas",
+            "nomeResumido" : "indArcHopkins"
+          },
+          "indArcPacino" : {
+            "nomeCompleto" : "Al Pacino - O Irlandês",
+            "nomeResumido" : "indArcPacino"
+          },
+          "indArcPesci" : {
+            "nomeCompleto" : "Joe Pesci - O Irlandês",
+            "nomeResumido" : "indArcPesci"
+          },
+          "indArcPitt" : {
+            "nomeCompleto" : "Brad Pitt - Era um vez em... Hollywood",
+            "nomeResumido" : "indArcPitt"
           }
-        },
-        "efeitos" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catEfeitos" : {
+        "nomeCompleto" : "Melhores Efeitos Visuais",
+        "nomeMenu" : "Efeitos Visuais",
+        "nomeResumido" : "catEfeitos",
+        "indicados" : {
+          "indEfeVingadores" : {
+            "nomeCompleto" : "Vingadores: Ultimato",
+            "nomeResumido" : "indEfeVingadores"
+          },
+          "indEfeIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indEfeIrlandes"
+          },
+          "indEfeLeao" : {
+            "nomeCompleto" : "O Rei Leão",
+            "nomeResumido" : "indEfeLeao"
+          },
+          "indEfe1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indEfe1917"
+          },
+          "indEfeStarwars" : {
+            "nomeCompleto" : "Star Wars: A Ascenção Skywalker",
+            "nomeResumido" : "indEfeStarwars"
           }
-        },
-        "edicao" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catEdicao" : {
+        "nomeCompleto" : "Melhor Edição",
+        "nomeMenu" : "Edição",
+        "nomeResumido" : "catEdicao",
+        "indicados" : {
+          "indEdiFord" : {
+            "nomeCompleto" : "Ford vs Ferrari",
+            "nomeResumido" : "indEdiFord"
+          },
+          "indEdiIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indEdiIrlandes"
+          },
+          "indEdiJojo" : {
+            "nomeCompleto" : "JoJo Rabbit",
+            "nomeResumido" : "indEdiJojo"
+          },
+          "indEdiCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indEdiCoringa"
+          },
+          "indEdiParasita" : {
+            "nomeCompleto" : "Parasita",
+            "nomeResumido" : "indEdiParasita"
           }
-        },
-        "animacao" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAnimacao" : {
+        "nomeCompleto" : "Melhor  Animação",
+        "nomeMenu" : "Animação",
+        "nomeResumido" : "catAnimacao",
+        "indicados" : {
+          "indAniDragao" : {
+            "nomeCompleto" : "Como treinar seu Dragão 3",
+            "nomeResumido" : "indAniDragao"
+          },
+          "indAniBody" : {
+            "nomeCompleto" : "I lost my body",
+            "nomeResumido" : "indAniBody"
+          },
+          "indAniKlaus" : {
+            "nomeCompleto" : "Klaus",
+            "nomeResumido" : "indAniKlaus"
+          },
+          "indAniLink" : {
+            "nomeCompleto" : "Link Perdido",
+            "nomeResumido" : "indAniLink"
+          },
+          "indAniToy" : {
+            "nomeCompleto" : "Toy Story 4",
+            "nomeResumido" : "indAniToy"
           }
-        },
-        "estrangeiro" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catEstrangeiro" : {
+        "nomeCompleto" : "Melhor Longa Estrangeiro",
+        "nomeMenu" : "Estrangeiro",
+        "nomeResumido" : "catEstrangeiro",
+        "indicados" : {
+          "indEstCorpus" : {
+            "nomeCompleto" : "Corpus Christi",
+            "nomeResumido" : "indEstCorpus"
+          },
+          "indEstHoneyland" : {
+            "nomeCompleto" : "Honeyland",
+            "nomeResumido" : "indEstHoneyland"
+          },
+          "indEstMiseraveis" : {
+            "nomeCompleto" : "Os Miseráveis",
+            "nomeResumido" : "indEstMiseraveis"
+          },
+          "indEstDor" : {
+            "nomeCompleto" : "Dor e Glória",
+            "nomeResumido" : "indEstDor"
+          },
+          "indEstParasita" : { 
+            "nomeCompleto" : "Parasita",
+            "nomeResumido" : "indEstParasita"
           }
-        },
-        "mixSom" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catMixSom" : {
+        "nomeCompleto" : "Melhor Mixagem de Som",
+        "nomeMenu" : "Mixagem de Som",
+        "nomeResumido" : "catMixSom",
+        "indicados" : {
+          "indMixAstra" : {
+            "nomeCompleto" : "Ad Astra",
+            "nomeResumido" : "indMixAstra"
+          },
+          "indMixFord" : {
+            "nomeCompleto" : "Ford vs Ferrari",
+            "nomeResumido" : "indMixFord"
+          },
+          "indMixCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indMixCoringa"
+          },
+          "indMix1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indMix1917"
+          },
+          "indMixHollywood" : {
+            "nomeCompleto" : "Era uma vez em... Hollywood",
+            "nomeResumido" : "indMixHollywood"
           }
-        },
-        "ediSom" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catEdiSom" : {
+        "nomeCompleto" : "Melhor Edição de Som",
+        "nomeMenu" : "Edição de Som",
+        "nomeResumido" : "catEdiSom",
+        "indicados" : {
+          "indEsoFord" : {
+            "nomeCompleto" : "Ford vs Ferrari",
+            "nomeResumido" : "indEsoFord"
+          },
+          "indEsoCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indEsoCoringa"
+          },
+          "indEso1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indEso1917"
+          },
+          "indEsoHollywood" : {
+            "nomeCompleto" : "Era uma vez em.. Hollywood",
+            "nomeResumido" : "indEsoHollywood"
+          },
+          "indEsoStarwars" : {
+            "nomeCompleto" : "Star Wars: A Ascenção Skywalker",
+            "nomeResumido" : "indEsoStarwars"
           }
-        },
-        "figurino" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catFigurino" : {
+        "nomeCompleto" : "Melhor Figurino",
+        "nomeMenu" : "Figurino",
+        "nomeResumido" : "catFigurino",
+        "indicados" : {
+          "indFigIrlandes" : {
+            "nomeCompleto" : "O Irlandês",
+            "nomeResumido" : "indFigIrlandes"
+          },
+          "indFigJojo" : {
+            "nomeCompleto" : "JoJo Rabbit",
+            "nomeResumido" : "indFigJojo"
+          },
+          "indicado3" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indFigCoringa"
+          },
+          "indFigAdoraveis" : {
+            "nomeCompleto" : "Adoráveis Mulheres",
+            "nomeResumido" : "indFigAdoraveis"
+          },
+          "indFigHollywood" : {
+            "nomeCompleto" : "Em uma vez em... Hollywood",
+            "nomeResumido" : "indFigHollywood"
           }
-        },
-        "maquiagem" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catMaquiagem" : {
+        "nomeCompleto" : "Melhor Maquiagem e Cabelo",
+        "nomeMenu" : "Maquiagem",
+        "nomeResumido" : "catMaquiagem",
+        "indicados" : {
+          "indMaqEscandalo" : {
+            "nomeCompleto" : "O Escândalo",
+            "nomeResumido" : "indMaqEscandalo"
+          },
+          "indMaqCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indMaqCoringa"
+          },
+          "indMaqJudy" : {
+            "nomeCompleto" : "Judy",
+            "nomeResumido" : "indMaqJudy"
+          },
+          "indMaqMalevola" : {
+            "nomeCompleto" : "Malévola - A Dona do Mal",
+            "nomeResumido" : "indMaqMalevola"
+          },
+          "indMaq1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indMaq1917"
           }
-        },
-        "documentario" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catDocumentario" : {
+        "nomeCompleto" : "Melhor Documentário em Longa-Metragem",
+        "nomeMenu" : "Documentário",
+        "nomeResumido" : "catDocumentario",
+        "indicados" : {
+          "indDocAmerican" : {
+            "nomeCompleto" : "American Factory",
+            "nomeResumido" : "indDocAmerican"
+          },
+          "indDocCave" : {
+            "nomeCompleto" : "The Cave",
+            "nomeResumido" : "indDocCave"
+          },
+          "indDocDemocracia" : {
+            "nomeCompleto" : "Democracia em Vertigem",
+            "nomeResumido" : "indDocDemocracia"
+          },
+          "indDocSama" : {
+            "nomeCompleto" : "For Sama",
+            "nomeResumido" : "indDocSama"
+          },
+          "indDocHoneyland" : {
+            "nomeCompleto" : "Honeyland",
+            "nomeResumido" : "indDocHoneyland"
           }
-        },
-        "trilhaSonora" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catTrilha" : {
+        "nomeCompleto" : "Melhor Trilha Sonora",
+        "nomeMenu" : "Trilha Sonora",
+        "nomeResumido" : "catTrilha",
+        "indicados" : {
+          "indTriCoringa" : {
+            "nomeCompleto" : "Coringa",
+            "nomeResumido" : "indTriCoringa"
+          },
+          "indTriAdoraveis" : {
+            "nomeCompleto" : "Adoráveis Mulheres",
+            "nomeResumido" : "indTriAdoraveis"
+          },
+          "indTriCasamento" : {
+            "nomeCompleto" : "História de um Casamento",
+            "nomeResumido" : "indTriCasamento"
+          },
+          "indTri1917" : {
+            "nomeCompleto" : "1917",
+            "nomeResumido" : "indTri1917"
+          },
+          "indTriStarwars" : {
+            "nomeCompleto" : "Star Wars: A Ascenção Skywalker",
+            "nomeResumido" : "indTriStarwars"
           }
-        },
-        "curtaMetragem" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catCurta" : {
+        "nomeCompleto" : "Melhor Curta-Metragem",
+        "nomeMenu" : "Curta-Metragem",
+        "nomeResumido" : "catCurta",
+        "indicados" : {
+          "indCrtBrotherhood" : {
+            "nomeCompleto" : "Brotherhood",
+            "nomeResumido" : "indCrtBrotherhood"
+          },
+          "indCrtNefta" : {
+            "nomeCompleto" : "Nefta Football Club",
+            "nomeResumido" : "indCrtNefta"
+          },
+          "indCrtWindow" : {
+            "nomeCompleto" : "The neighbors' Window",
+            "nomeResumido" : "indCrtWindow"
+          },
+          "indCrtSaria" : {
+            "nomeCompleto" : "Saria",
+            "nomeResumido" : "indCrtSaria"
+          },
+          "indCrtSister" : {
+            "nomeCompleto" : "A Sister",
+            "nomeResumido" : "indCrtSister"
           }
-        },
-        "CancaoOriginal" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catMusica" : {
+        "nomeCompleto" : "Melhor Canção Original",
+        "nomeMenu" : "Canção Original",
+        "nomeResumido" : "catMusica",
+        "indicados" : {
+          "indMusToy" : {
+            "nomeCompleto" : "Toy Story 4 - I can´t let you throw yourself away",
+            "nomeResumido" : "indMusToy"
+          },
+          "indMusRocketman" : {
+            "nomeCompleto" : "Rocketman - (I'm gonna) Love me again",
+            "nomeResumido" : "indMusRocketman"
+          },
+          "indMusSuperacao" : {
+            "nomeCompleto" : "Superação: O milagre da fé - I'm standing with you",
+            "nomeResumido" : "indMusSuperacao"
+          },
+          "indMusFrozen" : {
+            "nomeCompleto" : "Frozen II - Into the unknown",
+            "nomeResumido" : "indMusFrozen"
+          },
+          "indMusHarriet" : {
+            "nomeCompleto" : "Harriet - Stand up",
+            "nomeResumido" : "indMusHarriet"
           }
-        },
-        "animCurta" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catAnimacaoCurta" : {
+        "nomeCompleto" : "Melhor Curta em Animação",
+        "nomeMenu" : "Anim. Curta-Metragem",
+        "nomeResumido" : "catAnimacaoCurta",
+        "indicados" : {
+          "indActDcera" : {
+            "nomeCompleto" : "DCERA (Daughter)",
+            "nomeResumido" : "indActDcera"
+          },
+          "indActHair" : {
+            "nomeCompleto" : "Hair Love",
+            "nomeResumido" : "indActHair"
+          },
+          "indActKitbull" : {
+            "nomeCompleto" : "Kitbull",
+            "nomeResumido" : "indActKitbull"
+          },
+          "indActMemorable" : {
+            "nomeCompleto" : "Memorable",
+            "nomeResumido" : "indActMemorable"
+          },
+          "indActSister" : {
+            "nomeCompleto" : "Sister",
+            "nomeResumido" : "indActSister"
           }
-        },
-        "Doc. Curta-Metragem" : {
-          "nomeCompleto" : "",
-          "nomeResumido" : "",
-          "indicados" : {
-            "indicado1" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado2" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado3" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado4" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            },
-            "indicado5" : {
-              "nomeCompleto" : "",
-              "nomeResumido" : ""
-            }
+        }
+      },
+      "catDocCurta" : {
+        "nomeCompleto" : " Melhor Documentário em Curta-Metragem",
+        "nomeMenu" : "Doc. Curta-Metragem",
+        "nomeResumido" : "catDocCurta",
+        "indicados" : {
+          "indDctAbsense" : {
+            "nomeCompleto" : "In the absense",
+            "nomeResumido" : "indDctAbsense"
+          },
+          "indDctSkate" : {
+            "nomeCompleto" : "Learning to skateboard in a warzone (if you´re a girl)",
+            "nomeResumido" : "indDctSkate"
+          },
+          "indDctLife" : {
+            "nomeCompleto" : "Life overtakes me",
+            "nomeResumido" : "indDctLife"
+          },
+          "indDctSuperman" : {
+            "nomeCompleto" : "St. Louis Superman",
+            "nomeResumido" : "indDctSuperman"
+          },
+          "indDctWalk" : {
+            "nomeCompleto" : "Walk Run Cha-Cha",
+            "nomeResumido" : "indDctWalk"
           }
         }
       }
-  }
+    }
+}
