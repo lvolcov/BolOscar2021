@@ -29,11 +29,9 @@ bot.action("menu", (ctx) => {
     ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: result}})
 })
 
-
 bot.on('callback_query', (ctx) => {
     const called = ctx.update.callback_query.data
     const typeCalled = called.substring(0,3)
-    // answerCallbackQuery(called, text = 'voto contabilizado', show_alert = true, url = NULL, cache_time = NULL)
     ctx.deleteMessage()
     if (typeCalled === 'cat') {
         const makeResult = Object.keys(db.categorias[called].indicados).map((elem) =>{
@@ -46,6 +44,7 @@ bot.on('callback_query', (ctx) => {
         ///
         /// INCLUIR CONTAGEM DOS VOTOS
         ///
+        ctx.answerCbQuery(called, {text : '✅ Voto Contabilizado', show_alert : false})
         const makeResult = Object.keys(db.categorias).map((elem) =>{
             return {text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido}
         })
