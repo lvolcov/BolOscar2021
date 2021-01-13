@@ -1,29 +1,628 @@
 {
-    "update": {
-      "update_id": 480186298,
-      "callback_query": {
-        "id": '2778971203279996360',
-        "chat_instance": '1290692697582290172',
+    "categorias": {
+        "filme" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "diretor" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "fotografia" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "arte" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "rotAdapt" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "rotOrig" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "atrizPrincipal" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "atorPrincipal" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "atrizCoadjuvante" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "atorCoadjuvante" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "efeitos" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "edicao" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "animacao" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "estrangeiro" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "mixSom" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "ediSom" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "figurino" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "maquiagem" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "documentario" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "trilhaSonora" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "curtaMetragem" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "CancaoOriginal" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "animCurta" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        },
+        "Doc. Curta-Metragem" : {
+          "nomeCompleto" : "",
+          "nomeResumido" : "",
+          "indicados" : {
+            "indicado1" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado2" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado3" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado4" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            },
+            "indicado5" : {
+              "nomeCompleto" : "",
+              "nomeResumido" : ""
+            }
+          }
+        }
       }
-    },
-    "tg": "Telegram" {
-      "token": '1584263107:AAHsNPshaIM-zQV04WQl6Y15mqThDx81eV0',
-      "response": undefined,
-      "options": {
-        "apiRoot": 'https://api.telegram.org',
-        "webhookReply": true,
-        "agent": [Agent],
-        "attachmentAgent": undefined
-      }
-    },
-    "botInfo": {
-      "id": 1584263107,
-      "is_bot": true,
-      "first_name": "Bol'Oscar 2021",
-      "username": 'BolOscar2021_bot',
-      "can_join_groups": false,
-      "can_read_all_group_messages": false,
-      "supports_inline_queries": false
-    },
-    "state": {}
   }
