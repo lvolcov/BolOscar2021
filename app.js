@@ -19,16 +19,6 @@ bot.command("menu", (ctx) => {
     })
 })
 
-
-// bot.action("menu", (ctx) => {
-//     ctx.deleteMessage()
-//     const makeResult = Object.keys(db.categorias).map((elem) =>{
-//         return {text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido}
-//     })
-//     const result = geraLista(makeResult)
-//     ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: result}})
-// })
-
 bot.on('callback_query', (ctx) => {
     const called = ctx.update.callback_query.data
     const typeCalled = called.substring(0,3)
