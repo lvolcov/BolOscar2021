@@ -4,6 +4,7 @@ const { Telegraf } = require('telegraf')
 const getVotes = require('./sqlResources/getVotes')
 const newUser = require('./sqlResources/createNewUser')
 const postVote = require('./sqlResources/postVote')
+const menuInicialText = require('./textsMenus/menuInicial')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -16,7 +17,8 @@ bot.start(async (ctx) => {
         newUser(telegramID, nome); 
     }
     menuInicial = [[{text : "Votar", callback_data: "volCategoria"}, {text : "Já votados", callback_data: "voted"}],]
-    ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: menuInicial}})
+    ctx.reply(menuInicialText())
+    ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
 })
 
 bot.on('callback_query', async (ctx) => {
