@@ -4,6 +4,7 @@
         "nomeCompleto" : "Melhor Filme",
         "nomeMenu" : "Filme",
         "nomeResumido" : "catFilme",
+        "peso" : 8,
         "indicados" : {
           "indFilFord" : {
             "nomeCompleto" : "Ford vs Ferrari",
@@ -47,6 +48,7 @@
         "nomeCompleto" : "Melhor Direção",
         "nomeMenu" : "Direção",
         "nomeResumido" : "catDirecao",
+        "peso" : 7,
         "indicados" : {
           "indDirScorcese" : {
             "nomeCompleto" : "Martin Scorsese - O Irlandês",
@@ -74,6 +76,7 @@
         "nomeCompleto" : "Melhor Fotografia",
         "nomeMenu" : "Dir. Fotografia",
         "nomeResumido" : "catFotografia",
+        "peso" : 6,
         "indicados" : {
           "indFotIrlandes" : {
             "nomeCompleto" : "O Irlandês",
@@ -101,6 +104,7 @@
         "nomeCompleto" : "Melhor Design de Produção",
         "nomeMenu" : "Dir. Arte",
         "nomeResumido" : "catArte",
+        "peso" : 6,
         "indicados" : {
           "indArtIrlandes" : {
             "nomeCompleto" : "O Irlandês",
@@ -128,6 +132,7 @@
         "nomeCompleto" : "Melhor Roteiro Adaptado",
         "nomeMenu" : "Roteiro Adaptado",
         "nomeResumido" : "catrotAdapt",
+        "peso" : 6,
         "indicados" : {
           "indRadIrlandes" : {
             "nomeCompleto" : "O Irlandês",
@@ -155,6 +160,7 @@
         "nomeCompleto" : "Melhor Roteiro Original",
         "nomeMenu" : "Roteiro Original",
         "nomeResumido" : "catrotOrig",
+        "peso" : 6,
         "indicados" : {
           "indRorFacas" : {
             "nomeCompleto" : "Entre facas e segredos",
@@ -182,6 +188,7 @@
         "nomeCompleto" : "Melhor Atriz",
         "nomeMenu" : "Atriz",
         "nomeResumido" : "catAtriz",
+        "peso" : 6,
         "indicados" : {
           "indAtzCynthia" : {
             "nomeCompleto" : "Cythia Erivo - Harriet",
@@ -209,6 +216,7 @@
         "nomeCompleto" : "Melhor Ator",
         "nomeMenu" : "Ator",
         "nomeResumido" : "catAtor",
+        "peso" : 6,
         "indicados" : {
           "indAtrBanderas" : {
             "nomeCompleto" : "Antonio Banderas - Dor e Glória",
@@ -236,6 +244,7 @@
         "nomeCompleto" : "Melhor Atriz Coadjuvante",
         "nomeMenu" : "Atriz Coadjuvante",
         "nomeResumido" : "catAtrizCoad",
+        "peso" : 5,
         "indicados" : {
           "indAzcKathy" : {
             "nomeCompleto" : "Kathy Bates - O Caso Richard Jewell",
@@ -263,6 +272,7 @@
         "nomeCompleto" : "Melhor Ator Coadjuvante",
         "nomeMenu" : "Ator Coadjuvante",
         "nomeResumido" : "catAtorCoad",
+        "peso" : 5,
         "indicados" : {
           "indArcHanks" : {
             "nomeCompleto" : "Tom Hanks - Um lindo dia na vizinhança",
@@ -290,6 +300,7 @@
         "nomeCompleto" : "Melhores Efeitos Visuais",
         "nomeMenu" : "Efeitos Visuais",
         "nomeResumido" : "catEfeitos",
+        "peso": 4,
         "indicados" : {
           "indEfeVingadores" : {
             "nomeCompleto" : "Vingadores: Ultimato",
@@ -317,6 +328,7 @@
         "nomeCompleto" : "Melhor Edição",
         "nomeMenu" : "Edição",
         "nomeResumido" : "catEdicao",
+        "peso": 4,
         "indicados" : {
           "indEdiFord" : {
             "nomeCompleto" : "Ford vs Ferrari",
@@ -344,6 +356,7 @@
         "nomeCompleto" : "Melhor  Animação",
         "nomeMenu" : "Animação",
         "nomeResumido" : "catAnimacao",
+        "peso": 4,
         "indicados" : {
           "indAniDragao" : {
             "nomeCompleto" : "Como treinar seu Dragão 3",
@@ -371,6 +384,7 @@
         "nomeCompleto" : "Melhor Longa Estrangeiro",
         "nomeMenu" : "Estrangeiro",
         "nomeResumido" : "catEstrangeiro",
+        "peso": 4,
         "indicados" : {
           "indEstCorpus" : {
             "nomeCompleto" : "Corpus Christi",
@@ -398,6 +412,7 @@
         "nomeCompleto" : "Melhor Mixagem de Som",
         "nomeMenu" : "Mixagem de Som",
         "nomeResumido" : "catMixSom",
+        "peso": 3,
         "indicados" : {
           "indMixAstra" : {
             "nomeCompleto" : "Ad Astra",
@@ -425,6 +440,7 @@
         "nomeCompleto" : "Melhor Edição de Som",
         "nomeMenu" : "Edição de Som",
         "nomeResumido" : "catEdiSom",
+        "peso": 3,
         "indicados" : {
           "indEsoFord" : {
             "nomeCompleto" : "Ford vs Ferrari",
@@ -452,6 +468,7 @@
         "nomeCompleto" : "Melhor Figurino",
         "nomeMenu" : "Figurino",
         "nomeResumido" : "catFigurino",
+        "peso": 3,
         "indicados" : {
           "indFigIrlandes" : {
             "nomeCompleto" : "O Irlandês",
@@ -479,6 +496,7 @@
         "nomeCompleto" : "Melhor Maquiagem e Cabelo",
         "nomeMenu" : "Maquiagem",
         "nomeResumido" : "catMaquiagem",
+        "peso": 3,
         "indicados" : {
           "indMaqEscandalo" : {
             "nomeCompleto" : "O Escândalo",
@@ -506,6 +524,7 @@
         "nomeCompleto" : "Melhor Documentário em Longa-Metragem",
         "nomeMenu" : "Documentário",
         "nomeResumido" : "catDocumentario",
+        "peso": 3,
         "indicados" : {
           "indDocAmerican" : {
             "nomeCompleto" : "American Factory",
@@ -533,6 +552,7 @@
         "nomeCompleto" : "Melhor Trilha Sonora",
         "nomeMenu" : "Trilha Sonora",
         "nomeResumido" : "catTrilha",
+        "peso": 2,
         "indicados" : {
           "indTriCoringa" : {
             "nomeCompleto" : "Coringa",
@@ -560,6 +580,7 @@
         "nomeCompleto" : "Melhor Curta-Metragem",
         "nomeMenu" : "Curta-Metragem",
         "nomeResumido" : "catCurta",
+        "peso": 2,
         "indicados" : {
           "indCrtBrotherhood" : {
             "nomeCompleto" : "Brotherhood",
@@ -587,6 +608,7 @@
         "nomeCompleto" : "Melhor Canção Original",
         "nomeMenu" : "Canção Original",
         "nomeResumido" : "catMusica",
+        "peso": 1,
         "indicados" : {
           "indMusToy" : {
             "nomeCompleto" : "Toy Story 4 - I can´t let you throw yourself away",
@@ -614,6 +636,7 @@
         "nomeCompleto" : "Melhor Curta em Animação",
         "nomeMenu" : "Anim. Curta-Metragem",
         "nomeResumido" : "catAnimacaoCurta",
+        "peso": 1,
         "indicados" : {
           "indActDcera" : {
             "nomeCompleto" : "DCERA (Daughter)",
@@ -638,9 +661,10 @@
         }
       },
       "catDocCurta" : {
-        "nomeCompleto" : " Melhor Documentário em Curta-Metragem",
+        "nomeCompleto" : "Melhor Documentário em Curta-Metragem",
         "nomeMenu" : "Doc. Curta-Metragem",
         "nomeResumido" : "catDocCurta",
+        "peso": 1,
         "indicados" : {
           "indDctAbsense" : {
             "nomeCompleto" : "In the absense",
