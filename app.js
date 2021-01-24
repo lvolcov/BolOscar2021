@@ -1,24 +1,59 @@
 //http://49.213.81.43/static/tool/thuocbot/node_modules/telegraf/docs/#/
 require ('custom-env').env()
+const table = require("table"); 
 const { Telegraf } = require('telegraf')
 const getVotes = require('./sqlResources/getVotes')
 const newUser = require('./sqlResources/createNewUser')
 const postVote = require('./sqlResources/postVote')
+const changeName = require('./sqlResources/changeName')
 const menuInicialText = require('./textsMenus/menuInicial')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
+bot.hashtag (async (ctx) => {
+    const newName = ctx.update.message.text.substring(1)
+    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
+    ctx.deleteMessage()
+
+    if (newName.length > 15){
+        ctx.telegram.sendMessage(ctx.chat.id, '❌ Nome muito longo ! ❌')
+            .then((result) => { setTimeout(() => {
+                ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
+            }, 3000)})
+            .catch(err => console.log(err))
+    }else if (format.test(newName)) {
+        ctx.telegram.sendMessage(ctx.chat.id, '❌ Nome contendo caracteres especiais ❌')
+            .then((result) => { setTimeout(() => {
+                ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
+            }, 3000)})
+            .catch(err => console.log(err))
+    }else{
+        ctx.telegram.sendMessage(ctx.chat.id, `Novo nome: ${newName} \n\nSalvar alteração?`, 
+            {reply_markup: {inline_keyboard: [[{ text: 'Sim', callback_data: String('salvaNome '+ newName)}, { text: 'Não', callback_data: 'naoSalvaNome'}]]}})
+    }
+
+})
+
 bot.start(async (ctx) => {
     const telegramID = ctx.update.message.from.id
-    const nome = String(ctx.update.message.from.first_name === undefined ? telegramID : ctx.update.message.from.first_name) +" "+ String(ctx.update.message.from.last_name === undefined ? '' : ctx.update.message.from.last_name)
-    ctx.deleteMessage()
     let info = await getVotes(telegramID)
+    ctx.deleteMessage()
+    menuInicial = []
+    const voted = []
     if(info.length === 0) {
-        newUser(telegramID, nome); 
+        nome = String(ctx.update.message.from.first_name === undefined ? telegramID : ctx.update.message.from.first_name) +" "+ String(ctx.update.message.from.last_name === undefined ? '' : ctx.update.message.from.last_name)
+        await newUser(telegramID, nome);
+    }else{
+        nome = info[0].Nome
+        Object.keys(info[0]).slice(3).map((elem, index) =>{
+            info[0][elem] !== "0" ? voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " voltaMenuJaVotados")}]) : ""
+            return 0
+        })
     }
-    menuInicial = [[{text : "Votar", callback_data: "volCategoria"}, {text : "Já votados", callback_data: "voted"}],]
-    ctx.reply(menuInicialText())
-    ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
+    voted.length === 0 ? menuInicial.push([{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}]) : menuInicial.push([{text : "Continuar Palpites", callback_data: "volCategoria"}, {text : "Revisar Palpites", callback_data: "voted"}])
+    menuInicial.push([{text : "Compartilhar", callback_data: "share"}, {text : "Mais info", callback_data: "moreInfo"}])
+    await ctx.reply(menuInicialText(nome.split(" ")[0]))
+    await ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
 })
 
 bot.on('callback_query', async (ctx) => {
@@ -55,7 +90,7 @@ bot.on('callback_query', async (ctx) => {
         })
         const result = previousInfo === "voltaMenuJaVotados" ? voted : geraLista(nonVoted)
         result.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial'}])
-        ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: result}})
+        ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: result}})
     }else if (called === 'volCategoria' && previousInfo !== "voltaMenuJaVotados"){
         const info = await getVotes(telegramID)
         const nonVoted = []
@@ -65,7 +100,7 @@ bot.on('callback_query', async (ctx) => {
         })
         const result = geraLista(nonVoted)
         result.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }])
-        ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: result}})
+        ctx.telegram.sendMessage(ctx.chat.id, "Selecione a categoria:", {reply_markup: {inline_keyboard: result}})
     }else if (called === 'voted' || previousInfo === "voltaMenuJaVotados"){
         const info = await getVotes(telegramID)
         const voted = []
@@ -76,8 +111,49 @@ bot.on('callback_query', async (ctx) => {
         voted.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }])
         ctx.telegram.sendMessage(ctx.chat.id, "Já votados :", {reply_markup: {inline_keyboard: voted}})  
     }else if (called === 'menuInicial'){
-        menuInicial = [[{text : "Votar", callback_data: "volCategoria"}, {text : "Já votados", callback_data: "voted"}],]
-        ctx.telegram.sendMessage(ctx.chat.id, "Menu:", {reply_markup: {inline_keyboard: menuInicial}})
+        let info = await getVotes(telegramID)
+        menuInicial = []
+        const voted = []
+    Object.keys(info[0]).slice(3).map((elem, index) =>{
+        info[0][elem] !== "0" ? voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " voltaMenuJaVotados")}]) : ""
+        return 0
+    })
+    voted.length === 0 ? menuInicial.push([{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}]) : menuInicial.push([{text : "Continuar Palpites", callback_data: "volCategoria"}, {text : "Revisar Palpites", callback_data: "voted"}])
+    menuInicial.push([{text : "Compartilhar", callback_data: "share"}, {text : "Mais info", callback_data: "moreInfo"}])
+    ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
+    }else if (called === 'salvaNome'){
+        newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
+        await changeName(telegramID, newName)
+        ctx.answerCbQuery(called, {text : `✅ Nome alterado !`, show_alert : true})
+    }else if (called === 'naoSalvaNome'){
+        ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true})
+    }else if (called === 'moreInfo'){
+        moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Ver lista dos Palpites", callback_data: "votesList"}],
+        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
+        [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
+        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
+    }else if (called === 'votesList'){
+        const info = await getVotes(telegramID)
+        const voted = [['CATEGORIA', 'PALPITE']]
+        Object.keys(info[0]).slice(3).map((elem, index) =>{
+            info[0][elem] !== "0" ? voted.push([String(db.categorias[elem].nomeMenu), String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto)]) : ""
+            return 0
+        })
+        const config = {
+            columns: {
+              0: {
+                width: 10,
+                wrapWord: true
+              },
+              1: {
+                width: 10,
+                wrapWord: true
+              }
+            }
+          };
+        
+        const lista = table.table(voted, config); 
+        ctx.telegram.sendMessage(ctx.chat.id, String(`<pre>\n${lista}\n</pre>`), {parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
     }
 })
 
@@ -92,7 +168,7 @@ function geraLista (items) {
     while (i < items.length){
         if (items[i+1] === undefined){
             result.push([items[i]])
-        } else if (items[i].text.length > 24 || items[i+1].text.length > 24){
+        } else if (items[i].text.length > 20 || items[i+1].text.length > 20){
             result.push([items[i]])
             result.push([items[i+1]])
         } else {
