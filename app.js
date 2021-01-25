@@ -6,7 +6,7 @@ const getVotes = require('./sqlResources/getVotes')
 const newUser = require('./sqlResources/createNewUser')
 const postVote = require('./sqlResources/postVote')
 const changeName = require('./sqlResources/changeName')
-const resetVotes = require('./sqlResources/resetVotes')
+const deleteVotes = require('./sqlResources/deleteVotes')
 const menuInicialText = require('./textsMenus/menuInicial')
 const changeNameMessage = require('./textsMenus/changeNameMessage')
 const db = require('./db.json');
@@ -162,7 +162,8 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'resetVotesYes'){
         let info = await getVotes(telegramID)
         nome = info[0].Nome
-        await resetVotes(telegramID, nome)
+        await deleteVotes(telegramID)
+        await newUser(telegramID, nome)
         ctx.answerCbQuery(called, {text : `✅ Palpites Resetados !`, show_alert : true})
         moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
         [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
