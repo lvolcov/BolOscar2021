@@ -6,7 +6,9 @@ const getVotes = require('./sqlResources/getVotes')
 const newUser = require('./sqlResources/createNewUser')
 const postVote = require('./sqlResources/postVote')
 const changeName = require('./sqlResources/changeName')
+const resetVotes = require('./sqlResources/resetVotes')
 const menuInicialText = require('./textsMenus/menuInicial')
+const changeNameMessage = require('./textsMenus/changeNameMessage')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -128,7 +130,7 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'naoSalvaNome'){
         ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true})
     }else if (called === 'moreInfo'){
-        moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Ver lista dos Palpites", callback_data: "votesList"}],
+        moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
         [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
         [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
         ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
@@ -139,21 +141,38 @@ bot.on('callback_query', async (ctx) => {
             info[0][elem] !== "0" ? voted.push([String(db.categorias[elem].nomeMenu), String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto)]) : ""
             return 0
         })
-        const config = {
-            columns: {
-              0: {
-                width: 10,
-                wrapWord: true
-              },
-              1: {
-                width: 10,
-                wrapWord: true
-              }
-            }
-          };
-        
-        const lista = table.table(voted, config); 
-        ctx.telegram.sendMessage(ctx.chat.id, String(`<pre>\n${lista}\n</pre>`), {parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+        if (voted.length > 1){
+            const config = {border: table.getBorderCharacters('ramac'), columns: {0: {width: 12,wrapWord: true},1: {width: 12,wrapWord: true}}}
+            const lista = String("<pre>" + table.table(voted, config) + "</pre>"); 
+            ctx.telegram.sendMessage(ctx.chat.id, String("Seus Palpites:\n\n"+lista), {parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+        } else {
+            ctx.telegram.sendMessage(ctx.chat.id, 'Você ainda não deu nenhum palpite.', {reply_markup: {inline_keyboard: [[{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}],[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+        }
+    }else if (called === 'pointsCat'){
+        const info = [['CATEGORIA', 'PONTUAÇÃO']]
+        Object.keys(db.categorias).map((categoria) =>{
+            info.push([db.categorias[categoria].nomeCompleto, db.categorias[categoria].peso])
+        })
+        const config = {border: table.getBorderCharacters('ramac'), columns: {0: {width: 12,wrapWord: true},1: {width: 12,wrapWord: true, alignment: 'center', width: 10}}}
+        const lista = String("<pre>" + table.table(info, config) + "</pre>"); 
+        ctx.telegram.sendMessage(ctx.chat.id, String("Pontuação de cada categoria:\n\n"+lista), {parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+    }else if (called === 'resetVotes'){
+        ctx.telegram.sendMessage(ctx.chat.id, "Tem certeza que deseja resetar seus palpites?", 
+            {reply_markup: {inline_keyboard: [[{text : "Sim", callback_data: "resetVotesYes"}, {text : "Não", callback_data: "moreInfo"}]]}})
+    }else if (called === 'resetVotesYes'){
+        let info = await getVotes(telegramID)
+        nome = info[0].Nome
+        await resetVotes(telegramID, nome)
+        ctx.answerCbQuery(called, {text : `✅ Palpites Resetados !`, show_alert : true})
+        moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
+        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
+        [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
+        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
+    }else if (called === 'changeName'){
+        let info = await getVotes(telegramID)
+        nome = info[0].Nome
+        ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome), {parse_mode: 'HTML', 
+            reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
     }
 })
 
