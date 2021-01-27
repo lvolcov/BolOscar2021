@@ -67,6 +67,10 @@ bot.on('callback_query', async (ctx) => {
     const previousInfo = ctx.update.callback_query.data.split(" ", 2)[1]
     const typeCalled = called.substring(0,3)
     const telegramID = ctx.update.callback_query.from.id
+    const moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
+        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
+        [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
+    previousInfo === "deleteLastMessage" ? ctx.telegram.deleteMessage(ctx.update.callback_query.message.chat.id, ctx.update.callback_query.message.message_id -1) : ""
 
     if (typeCalled === 'cat') { //Recebe a categoria e faz a lista dos indicados dela
         const makeResult = Object.keys(db.categorias[called].indicados).map((elem) =>{
@@ -130,12 +134,11 @@ bot.on('callback_query', async (ctx) => {
         newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
         await changeName(telegramID, newName)
         ctx.answerCbQuery(called, {text : `✅ Nome alterado !`, show_alert : true})
+        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'naoSalvaNome'){
         ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true})
+        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'moreInfo'){
-        moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
-        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
-        [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
         ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'votesList'){
         const info = await getVotes(telegramID)
@@ -176,8 +179,8 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'changeName'){
         let info = await getVotes(telegramID)
         nome = info[0].Nome
-        ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome), {parse_mode: 'HTML', 
-            reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+        await ctx.telegram.sendMessage(ctx.chat.id, "Qual o seu novo nome para o Ranking?", {reply_markup: {force_reply: true, }})
+        await ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome),{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "moreInfo deleteLastMessage"}]]}})
     }else if (called === 'leagues'){ //FALTA FAZER BOTOES ALTERNATIVOS CASO USUARIO JA TENHA CRIADO UMA LIGA E CASO JA ESTEJA EM UMA LIGA
         const info = await getLeagues(telegramID)
         const infoMenu = []
@@ -188,14 +191,46 @@ bot.on('callback_query', async (ctx) => {
         infoMenu.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial'  }])
         ctx.telegram.sendMessage(ctx.chat.id, "Já votados :", {reply_markup: {inline_keyboard: infoMenu}})
     }else if (called === 'createLeague'){
-
+        await ctx.telegram.sendMessage(ctx.chat.id, "Qual o nome da sua Liga?", {reply_markup: {force_reply: true}})
     }else if (called === 'joinLeague'){
 
     }
 
 })
 
-bot.use((ctx) => ctx.deleteMessage())
+bot.use( async (ctx) => {
+    const replyObject = ctx.update.message.reply_to_message
+    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
+    const messageTextUser = ctx.update.message.text
+    const telegramID = ctx.update.message.from.id
+    if (replyObject === undefined) {
+        ctx.deleteMessage()
+    }else if (replyObject.from.is_bot){
+        ctx.deleteMessage()
+        ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id)
+        ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id+1)
+        const validAnswer = validateAnswer(messageTextUser)
+        if (replyObject.text === "Qual o seu novo nome para o Ranking?") {
+            if (validAnswer === true){
+                ctx.telegram.sendMessage(ctx.chat.id, `Novo nome: ${messageTextUser} \n\nSalvar alteração?`, 
+                    {reply_markup: {inline_keyboard: [[{ text: 'Sim', callback_data: String('salvaNome '+ messageTextUser)}, { text: 'Não', callback_data: 'naoSalvaNome'}]]}})
+            }else{
+                let info = await getVotes(telegramID)
+                ctx.telegram.sendMessage(ctx.chat.id, validAnswer)
+                    .then((result) => { setTimeout(() => {
+                        ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
+                        .then(async (result) => {
+                            nome = info[0].Nome
+                            ctx.telegram.sendMessage(ctx.chat.id, "Qual o seu novo nome para o Ranking?", {reply_markup: {force_reply: true, }})
+                            ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome),{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "moreInfo deleteLastMessage"}]]}})
+                        })
+                        .catch(err => console.log(err))
+                    }, 3000)})
+                    .catch(err => console.log(err))
+            }
+        }
+    }
+})
 
 bot.launch()
 
@@ -215,4 +250,15 @@ function geraLista (items) {
         i += 2
     }
     return result
+}
+
+function validateAnswer (answer) {
+    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
+    if (answer.length > 15){
+        return '❌ Nome muito longo ! ❌'
+    }else if (format.test(answer)) {
+        return '❌ Nome contendo caracteres especiais ❌'
+    }else{
+        return true
+    }
 }

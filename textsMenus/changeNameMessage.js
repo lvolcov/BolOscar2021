@@ -1,7 +1,7 @@
 const changeNameMessage = ((nome) => {
     return `Seu atual nome no ranking é: <u>${nome}</u>.\n\n\
-Para altera-lo, basta escrever # seguido do novo nome que você gostaria de ter no ranking. \n\n\
-<b>Exemplo: #Leonardo DiCaprio</b>\n`
+ - Seu novo nome precisa ter entre 6 a 15 caracteres \n\n\
+ - Não pode conter caracteres especiais\n`
 })
 
 module.exports = changeNameMessage
