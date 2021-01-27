@@ -44,10 +44,10 @@ bot.start(async (ctx) => {
     const voted = []
     if(info.length === 0) {
         nome = String(ctx.update.message.from.first_name === undefined ? telegramID : ctx.update.message.from.first_name) +" "+ String(ctx.update.message.from.last_name === undefined ? '' : ctx.update.message.from.last_name)
-        await newUser(telegramID, nome);
+        await newUser(telegramID, nome, nome);
     }else{
         nome = info[0].Nome
-        Object.keys(info[0]).slice(3).map((elem, index) =>{
+        Object.keys(info[0]).slice(4).map((elem, index) =>{
             info[0][elem] !== "0" ? voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " voltaMenuJaVotados")}]) : ""
             return 0
         })
@@ -82,7 +82,7 @@ bot.on('callback_query', async (ctx) => {
         const nonVoted = []
         const voted = []
         ctx.answerCbQuery(called, {text : '✅ Pitaco Contabilizado', show_alert : true})
-        Object.keys(info[0]).slice(3).map((elem, index) =>{
+        Object.keys(info[0]).slice(4).map((elem, index) =>{
             if(info[0][elem] === "0"){
                 nonVoted.push({text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido})
             }else{
@@ -96,7 +96,7 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'volCategoria' && previousInfo !== "voltaMenuJaVotados"){
         const info = await getVotes(telegramID)
         const nonVoted = []
-        Object.keys(info[0]).slice(3).map((elem, index) =>{
+        Object.keys(info[0]).slice(4).map((elem, index) =>{
             info[0][elem] === "0" ? nonVoted.push({text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido}) : ""
             return 0
         })
@@ -106,7 +106,7 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'voted' || previousInfo === "voltaMenuJaVotados"){
         const info = await getVotes(telegramID)
         const voted = []
-        Object.keys(info[0]).slice(3).map((elem, index) =>{
+        Object.keys(info[0]).slice(4).map((elem, index) =>{
             info[0][elem] !== "0" ? voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " voltaMenuJaVotados")}]) : ""
             return 0
         })
@@ -116,7 +116,7 @@ bot.on('callback_query', async (ctx) => {
         let info = await getVotes(telegramID)
         menuInicial = []
         const voted = []
-    Object.keys(info[0]).slice(3).map((elem, index) =>{
+    Object.keys(info[0]).slice(4).map((elem, index) =>{
         info[0][elem] !== "0" ? voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " voltaMenuJaVotados")}]) : ""
         return 0
     })
@@ -131,13 +131,13 @@ bot.on('callback_query', async (ctx) => {
         ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true})
     }else if (called === 'moreInfo'){
         moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
-        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
+        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
         [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
         ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'votesList'){
         const info = await getVotes(telegramID)
         const voted = [['CATEGORIA', 'PALPITE']]
-        Object.keys(info[0]).slice(3).map((elem, index) =>{
+        Object.keys(info[0]).slice(4).map((elem, index) =>{
             info[0][elem] !== "0" ? voted.push([String(db.categorias[elem].nomeMenu), String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto)]) : ""
             return 0
         })
@@ -162,11 +162,12 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'resetVotesYes'){
         let info = await getVotes(telegramID)
         nome = info[0].Nome
+        nomeOriginal = info[0].NomeOriginal
         await deleteVotes(telegramID)
-        await newUser(telegramID, nome)
+        await newUser(telegramID, nomeOriginal, nome)
         ctx.answerCbQuery(called, {text : `✅ Palpites Resetados !`, show_alert : true})
         moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
-        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Votos", callback_data: "resetVotes"}],
+        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
         [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
         ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'changeName'){
