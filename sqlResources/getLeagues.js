@@ -1,13 +1,13 @@
 var mysql = require('mysql');
 
-const getVotes = (telegramID) => {
+const getLeagues = (telegramID) => {
   var con = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DATABASE
   });
-  const query = `SELECT * FROM Palpiteiros WHERE TelegramID = ${telegramID}`
+  const query = `SELECT * FROM Ligas WHERE TelegramIDParticipante = ${telegramID}`
   return new Promise( ( resolve, reject ) => {
     con.query(query, (err, result, fields) => {
       if (err)
@@ -18,4 +18,4 @@ const getVotes = (telegramID) => {
   })
 }
 
-module.exports = getVotes
+module.exports = getLeagues

@@ -1,13 +1,13 @@
 var mysql = require('mysql');
 
-const getVotes = (telegramID) => {
+const joinLeague = (nomeLiga, TelegramIDDono, TelegramIDParticipante) => {
   var con = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DATABASE
   });
-  const query = `SELECT * FROM Palpiteiros WHERE TelegramID = ${telegramID}`
+  const query = `INSERT INTO Ligas (NomeLiga, TelegramIDDono, TelegramIDParticipante) VALUES ("${nomeLiga}", ${TelegramIDDono}, ${TelegramIDParticipante})`
   return new Promise( ( resolve, reject ) => {
     con.query(query, (err, result, fields) => {
       if (err)
@@ -18,4 +18,4 @@ const getVotes = (telegramID) => {
   })
 }
 
-module.exports = getVotes
+module.exports = joinLeague

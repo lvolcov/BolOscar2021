@@ -9,6 +9,9 @@ const changeName = require('./sqlResources/changeName')
 const deleteVotes = require('./sqlResources/deleteVotes')
 const menuInicialText = require('./textsMenus/menuInicial')
 const changeNameMessage = require('./textsMenus/changeNameMessage')
+const getLeagues = require('./sqlResources/getLeagues')
+const createLeague = require('./sqlResources/createLeague')
+const joinLeague = require('./sqlResources/joinLeague')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -53,7 +56,7 @@ bot.start(async (ctx) => {
         })
     }
     voted.length === 0 ? menuInicial.push([{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}]) : menuInicial.push([{text : "Continuar Palpites", callback_data: "volCategoria"}, {text : "Revisar Palpites", callback_data: "voted"}])
-    menuInicial.push([{text : "Compartilhar", callback_data: "share"}, {text : "Mais info", callback_data: "moreInfo"}])
+    menuInicial.push([{text : "Ligas", callback_data: "leagues"}, {text : "Mais info", callback_data: "moreInfo"}])
     await ctx.reply(menuInicialText(nome.split(" ")[0]))
     await ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
 })
@@ -121,7 +124,7 @@ bot.on('callback_query', async (ctx) => {
         return 0
     })
     voted.length === 0 ? menuInicial.push([{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}]) : menuInicial.push([{text : "Continuar Palpites", callback_data: "volCategoria"}, {text : "Revisar Palpites", callback_data: "voted"}])
-    menuInicial.push([{text : "Compartilhar", callback_data: "share"}, {text : "Mais info", callback_data: "moreInfo"}])
+    menuInicial.push([{text : "Ligas", callback_data: "leagues"}, {text : "Mais info", callback_data: "moreInfo"}])
     ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
     }else if (called === 'salvaNome'){
         newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
@@ -175,7 +178,21 @@ bot.on('callback_query', async (ctx) => {
         nome = info[0].Nome
         ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome), {parse_mode: 'HTML', 
             reply_markup: {inline_keyboard: [[{ text: '⇦   ⇦   ⇦   Voltar para mais Informações', callback_data: 'moreInfo' }]]}})
+    }else if (called === 'leagues'){ //FALTA FAZER BOTOES ALTERNATIVOS CASO USUARIO JA TENHA CRIADO UMA LIGA E CASO JA ESTEJA EM UMA LIGA
+        const info = await getLeagues(telegramID)
+        const infoMenu = []
+        if (info[0] === undefined) {
+            infoMenu.push([{ text: 'Criar uma Liga', callback_data: 'createLeague'}, { text: 'Entrar em uma liga', callback_data: 'joinLeague'}])
+        }else if (info === telegramID) {
+        }
+        infoMenu.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial'  }])
+        ctx.telegram.sendMessage(ctx.chat.id, "Já votados :", {reply_markup: {inline_keyboard: infoMenu}})
+    }else if (called === 'createLeague'){
+
+    }else if (called === 'joinLeague'){
+
     }
+
 })
 
 bot.use((ctx) => ctx.deleteMessage())
