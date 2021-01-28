@@ -17,30 +17,6 @@ const joinLeague = require('./sqlResources/joinLeague')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
-bot.hashtag (async (ctx) => {
-    const newName = ctx.update.message.text.substring(1)
-    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
-    ctx.deleteMessage()
-
-    if (newName.length > 15){
-        ctx.telegram.sendMessage(ctx.chat.id, '❌ Nome muito longo ! ❌')
-            .then((result) => { setTimeout(() => {
-                ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
-            }, 3000)})
-            .catch(err => console.log(err))
-    }else if (format.test(newName)) {
-        ctx.telegram.sendMessage(ctx.chat.id, '❌ Nome contendo caracteres especiais ❌')
-            .then((result) => { setTimeout(() => {
-                ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
-            }, 3000)})
-            .catch(err => console.log(err))
-    }else{
-        ctx.telegram.sendMessage(ctx.chat.id, `Novo nome: ${newName} \n\nSalvar alteração?`, 
-            {reply_markup: {inline_keyboard: [[{ text: 'Sim', callback_data: String('salvaNome '+ newName)}, { text: 'Não', callback_data: 'naoSalvaNome'}]]}})
-    }
-
-})
-
 bot.start(async (ctx) => {
     const telegramID = ctx.update.message.from.id
     let info = await getVotes(telegramID)
@@ -66,7 +42,7 @@ bot.start(async (ctx) => {
 bot.on('callback_query', async (ctx) => {
     ctx.deleteMessage()
     const called = ctx.update.callback_query.data.split(" ", 2)[0]
-    const previousInfo = ctx.update.callback_query.data.split(" ", 2)[1]
+    const previousInfo = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
     const typeCalled = called.substring(0,3)
     const telegramID = ctx.update.callback_query.from.id
 
@@ -132,8 +108,7 @@ bot.on('callback_query', async (ctx) => {
     }else if (called === 'moreInfo' || called === 'salvaNome' || called === 'naoSalvaNome'){
         called === 'naoSalvaNome' ? ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true}) : ""
         if (called === 'salvaNome'){
-            newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
-            await changeName(telegramID, newName)
+            await changeName(telegramID, previousInfo)
             ctx.answerCbQuery(called, {text : `✅ Nome alterado !`, show_alert : true})
         }
         const moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
@@ -188,9 +163,8 @@ bot.on('callback_query', async (ctx) => {
             ctx.answerCbQuery(called, {text : "✅ Liga criada !", show_alert : true})
         }
         if (called === 'joinLeagueYes') { //FAZER AINDA
-            leagueJoined = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
             await createLeague(previousInfo, telegramID)
-            ctx.answerCbQuery(called, {text : `✅ Você agora está participando da Liga ${leagueJoined}!`, show_alert : true})
+            ctx.answerCbQuery(called, {text : `✅ Você agora está participando da Liga ${previousInfo}!`, show_alert : true})
         }
         const info = await getLeaguesList(telegramID)
         const infoMenu = []
