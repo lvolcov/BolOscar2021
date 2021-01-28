@@ -9,8 +9,10 @@ const changeName = require('./sqlResources/changeName')
 const deleteVotes = require('./sqlResources/deleteVotes')
 const menuInicialText = require('./textsMenus/menuInicial')
 const changeNameMessage = require('./textsMenus/changeNameMessage')
-const getLeagues = require('./sqlResources/getLeagues')
+const getLeaguesDetails = require('./sqlResources/getLeaguesDetails')
+const getLeaguesList = require('./sqlResources/getLeaguesList')
 const createLeague = require('./sqlResources/createLeague')
+const getNamesExistingLeagues = require('./sqlResources/getNamesExistingLeagues')
 const joinLeague = require('./sqlResources/joinLeague')
 const db = require('./db.json');
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -67,11 +69,8 @@ bot.on('callback_query', async (ctx) => {
     const previousInfo = ctx.update.callback_query.data.split(" ", 2)[1]
     const typeCalled = called.substring(0,3)
     const telegramID = ctx.update.callback_query.from.id
-    const moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
-        [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
-        [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
-    previousInfo === "deleteLastMessage" ? ctx.telegram.deleteMessage(ctx.update.callback_query.message.chat.id, ctx.update.callback_query.message.message_id -1) : ""
 
+    previousInfo === "deleteLastMessage" ? ctx.telegram.deleteMessage(ctx.update.callback_query.message.chat.id, ctx.update.callback_query.message.message_id -1) : ""
     if (typeCalled === 'cat') { //Recebe a categoria e faz a lista dos indicados dela
         const makeResult = Object.keys(db.categorias[called].indicados).map((elem) =>{
             return {text : db.categorias[called].indicados[elem].nomeCompleto, callback_data: String(db.categorias[called].indicados[elem].nomeResumido + " " + previousInfo)}
@@ -130,15 +129,16 @@ bot.on('callback_query', async (ctx) => {
     voted.length === 0 ? menuInicial.push([{text : "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria"}]) : menuInicial.push([{text : "Continuar Palpites", callback_data: "volCategoria"}, {text : "Revisar Palpites", callback_data: "voted"}])
     menuInicial.push([{text : "Ligas", callback_data: "leagues"}, {text : "Mais info", callback_data: "moreInfo"}])
     ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: menuInicial}})
-    }else if (called === 'salvaNome'){
-        newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
-        await changeName(telegramID, newName)
-        ctx.answerCbQuery(called, {text : `✅ Nome alterado !`, show_alert : true})
-        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
-    }else if (called === 'naoSalvaNome'){
-        ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true})
-        ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
-    }else if (called === 'moreInfo'){
+    }else if (called === 'moreInfo' || called === 'salvaNome' || called === 'naoSalvaNome'){
+        called === 'naoSalvaNome' ? ctx.answerCbQuery(called, {text : '❌ Nome não salvo', show_alert : true}) : ""
+        if (called === 'salvaNome'){
+            newName = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
+            await changeName(telegramID, newName)
+            ctx.answerCbQuery(called, {text : `✅ Nome alterado !`, show_alert : true})
+        }
+        const moreInfoMenu = [[{text : "Pesos das Categorias", callback_data: "pointsCat"}, {text : "Meus Palpites", callback_data: "votesList"}],
+            [{text : "Alterar nome", callback_data: "changeName"}, {text : "Resetar Palpites", callback_data: "resetVotes"}],
+            [{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }]]
         ctx.telegram.sendMessage(ctx.chat.id, "Mais Informações:", {reply_markup: {inline_keyboard: moreInfoMenu}})
     }else if (called === 'votesList'){
         const info = await getVotes(telegramID)
@@ -181,26 +181,48 @@ bot.on('callback_query', async (ctx) => {
         nome = info[0].Nome
         await ctx.telegram.sendMessage(ctx.chat.id, "Qual o seu novo nome para o Ranking?", {reply_markup: {force_reply: true, }})
         await ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome),{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "moreInfo deleteLastMessage"}]]}})
-    }else if (called === 'leagues'){ //FALTA FAZER BOTOES ALTERNATIVOS CASO USUARIO JA TENHA CRIADO UMA LIGA E CASO JA ESTEJA EM UMA LIGA
-        const info = await getLeagues(telegramID)
+    }else if (called === 'leagues' || called === 'naoCriaLiga' || called === 'criaLiga' || called === 'joinLeagueYes'){ 
+        called === 'naoCriaLiga' ? ctx.answerCbQuery(called, {text : '❌ Liga não criada', show_alert : true}) : ""
+        if (called === 'criaLiga') {
+            await createLeague(previousInfo, telegramID)
+            ctx.answerCbQuery(called, {text : "✅ Liga criada !", show_alert : true})
+        }
+        if (called === 'joinLeagueYes') { //FAZER AINDA
+            leagueJoined = ctx.update.callback_query.data.split(" ").slice(1).join(" ")
+            await createLeague(previousInfo, telegramID)
+            ctx.answerCbQuery(called, {text : `✅ Você agora está participando da Liga ${leagueJoined}!`, show_alert : true})
+        }
+        const info = await getLeaguesList(telegramID)
         const infoMenu = []
         if (info[0] === undefined) {
-            infoMenu.push([{ text: 'Criar uma Liga', callback_data: 'createLeague'}, { text: 'Entrar em uma liga', callback_data: 'joinLeague'}])
-        }else if (info === telegramID) {
+            infoMenu.push([{ text: 'Criar uma Liga', callback_data: 'createLeagueGetName'}, { text: 'Entrar em uma liga', callback_data: 'joinLeague'}])
+        }else{
+            let hasOwnLeague = false
+            info.map((elem) =>  elem.TelegramIDDono === elem.TelegramIDParticipante ? hasOwnLeague = true : 0)
+            if (hasOwnLeague) {
+                infoMenu.push([{ text: 'Gerenciar sua Liga', callback_data: 'manageLeague'}, { text: 'Ver suas Ligas', callback_data: 'checkLeagues'}])  
+            } else {
+                infoMenu.push([{ text: 'Criar uma Liga', callback_data: 'createLeagueGetName'}, { text: 'Ver suas Ligas', callback_data: 'checkLeagues'}])
+            }
+            infoMenu.push([{text: 'Entrar em uma Liga', callback_data: 'joinLeague'}, {text: 'Sair de uma Liga', callback_data: 'leftLeague'}])
         }
         infoMenu.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial'  }])
-        ctx.telegram.sendMessage(ctx.chat.id, "Já votados :", {reply_markup: {inline_keyboard: infoMenu}})
-    }else if (called === 'createLeague'){
-        await ctx.telegram.sendMessage(ctx.chat.id, "Qual o nome da sua Liga?", {reply_markup: {force_reply: true}})
+        ctx.telegram.sendMessage(ctx.chat.id, "Ligas do Bol'Oscar:", {reply_markup: {inline_keyboard: infoMenu}})
+    }else if (called === 'createLeagueGetName'){
+        await ctx.telegram.sendMessage(ctx.chat.id, "Qual será o nome da sua liga?", {reply_markup: {force_reply: true}})
+        await ctx.telegram.sendMessage(ctx.chat.id, "MENSAGEM FALANDO SOBRE CRIAR LIGA",{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "leagues deleteLastMessage"}]]}})
     }else if (called === 'joinLeague'){
-
+        await ctx.telegram.sendMessage(ctx.chat.id, "Qual o nome da Liga que você deseja participar?", {reply_markup: {force_reply: true}})
+        await ctx.telegram.sendMessage(ctx.chat.id, "MENSAGEM FALANDO SOBRE INGRESSAR NA LIGA E EXPLICANDO QUE TEM Q ESCREVER O NOME EXATO",{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "leagues deleteLastMessage"}]]}})
+    }else if (called === 'leftLeague'){
+    }else if (called === 'manageLeague'){
+    }else if (called === 'checkLeagues'){
     }
 
 })
 
 bot.use( async (ctx) => {
     const replyObject = ctx.update.message.reply_to_message
-    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
     const messageTextUser = ctx.update.message.text
     const telegramID = ctx.update.message.from.id
     if (replyObject === undefined) {
@@ -209,7 +231,7 @@ bot.use( async (ctx) => {
         ctx.deleteMessage()
         ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id)
         ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id+1)
-        const validAnswer = validateAnswer(messageTextUser)
+        let validAnswer = validateAnswer(messageTextUser)
         if (replyObject.text === "Qual o seu novo nome para o Ranking?") {
             if (validAnswer === true){
                 ctx.telegram.sendMessage(ctx.chat.id, `Novo nome: ${messageTextUser} \n\nSalvar alteração?`, 
@@ -221,8 +243,56 @@ bot.use( async (ctx) => {
                         ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
                         .then(async (result) => {
                             nome = info[0].Nome
-                            ctx.telegram.sendMessage(ctx.chat.id, "Qual o seu novo nome para o Ranking?", {reply_markup: {force_reply: true, }})
-                            ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome),{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "moreInfo deleteLastMessage"}]]}})
+                            await ctx.telegram.sendMessage(ctx.chat.id, "Qual o seu novo nome para o Ranking?", {reply_markup: {force_reply: true, }})
+                            await ctx.telegram.sendMessage(ctx.chat.id, changeNameMessage(nome),{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "moreInfo deleteLastMessage"}]]}})
+                        })
+                        .catch(err => console.log(err))
+                    }, 3000)})
+                    .catch(err => console.log(err))
+            }
+        }else if (replyObject.text === "Qual será o nome da sua liga?") {
+            if (validAnswer === true){
+                const validLeagues = await getNamesExistingLeagues()
+                const upperValidLeagues = validLeagues.map((elem) => elem.toUpperCase())
+                upperValidLeagues.indexOf(messageTextUser.toUpperCase()) !== -1 ? validAnswer = `❌ O nome ${messageTextUser} já está sendo usado! ❌` : ""
+            }
+            if (validAnswer === true){
+                ctx.telegram.sendMessage(ctx.chat.id, `Você está criando uma liga com o nome: ${messageTextUser} \n\nDeseja salvar?`, 
+                    {reply_markup: {inline_keyboard: [[{ text: 'Sim', callback_data: String('criaLiga '+ messageTextUser)}, { text: 'Não', callback_data: 'naoCriaLiga'}]]}})
+            }else{
+                let info = await getVotes(telegramID)
+                ctx.telegram.sendMessage(ctx.chat.id, validAnswer)
+                    .then((result) => { setTimeout(() => {
+                        ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
+                        .then(async (result) => {
+                            await ctx.telegram.sendMessage(ctx.chat.id, "Qual será o nome da sua liga?", {reply_markup: {force_reply: true, }})
+                            await ctx.telegram.sendMessage(ctx.chat.id, "MENSAGEM FALANDO SOBRE CRIAR LIGA",{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "leagues deleteLastMessage"}]]}})
+                        })
+                        .catch(err => console.log(err))
+                    }, 3000)})
+                    .catch(err => console.log(err))
+            }
+        }else if (replyObject.text === "Qual o nome da Liga que você deseja participar?") {
+            let leagueJoined = ''
+            if (validAnswer === true){
+                const validLeagues = await getNamesExistingLeagues()
+                const upperValidLeagues = validLeagues.map((elem) => elem.toUpperCase())
+                upperValidLeagues.indexOf(messageTextUser.toUpperCase()) === -1 ? validAnswer = "❌ Liga não encontrada! ❌" : leagueJoined = validLeagues[upperValidLeagues.indexOf(messageTextUser.toUpperCase())]
+                const listLeaguesUser = await getLeaguesList(telegramID)
+                listLeaguesUser.indexOf(leagueJoined) !== -1 ? validAnswer = "❌ Você já está participando dessa liga! ❌" : ""
+            }
+            if (validAnswer === true){
+                ctx.telegram.sendMessage(ctx.chat.id, `Confirmar a sua entrada na Liga ${leagueJoined}?`, 
+                    {reply_markup: {inline_keyboard: [[{ text: 'Sim', callback_data: String('joinLeagueYes '+ leagueJoined)}, { text: 'Não', callback_data: 'leagues'}]]}})
+            }else{
+                let info = await getVotes(telegramID)
+                ctx.telegram.sendMessage(ctx.chat.id, validAnswer)
+                    .then((result) => { setTimeout(() => {
+                        ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
+                        .then(async (result) => {
+                            nome = info[0].Nome
+                            await ctx.telegram.sendMessage(ctx.chat.id, "Qual o nome da Liga que você deseja participar?", {reply_markup: {force_reply: true}})
+                            await ctx.telegram.sendMessage(ctx.chat.id, "MENSAGEM FALANDO SOBRE INGRESSAR NA LIGA E EXPLICANDO QUE TEM Q ESCREVER O NOME EXATO",{parse_mode: 'HTML', reply_markup: {inline_keyboard: [[{text : "Voltar", callback_data: "leagues deleteLastMessage"}]]}})
                         })
                         .catch(err => console.log(err))
                     }, 3000)})
@@ -254,8 +324,10 @@ function geraLista (items) {
 
 function validateAnswer (answer) {
     const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
-    if (answer.length > 15){
+    if (answer.length > 16){
         return '❌ Nome muito longo ! ❌'
+    }else if (answer.length < 6) {
+        return '❌ Nome muito curto ! ❌'
     }else if (format.test(answer)) {
         return '❌ Nome contendo caracteres especiais ❌'
     }else{
