@@ -1,21 +1,14 @@
-var mysql = require('mysql');
+const knex = require('./dbconnectionKnex');
+const getLeaguesOwner = require('../sqlResources/getLeaguesOwner')
 
-const joinLeague = (nomeLiga, TelegramIDDono, TelegramIDParticipante) => {
-  var con = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
-  });
-  const query = `INSERT INTO Ligas (NomeLiga, TelegramIDDono, TelegramIDParticipante) VALUES ("${nomeLiga}", ${TelegramIDDono}, ${TelegramIDParticipante})`
-  return new Promise( ( resolve, reject ) => {
-    con.query(query, (err, result, fields) => {
-      if (err)
-      throw err;
-      resolve(JSON.parse(JSON.stringify(result)));
-    });
-    con.end()
-  })
-}
+const joinLeague = (async (nomeLiga, TelegramIDParticipante) => {
+  const TelegramIDDono = await getLeaguesOwner(nomeLiga)
+  return knex('Ligas')
+        .insert({NomeLiga : nomeLiga, TelegramIDDono : TelegramIDDono, TelegramIDParticipante : TelegramIDParticipante})
+        .then(data => {
+          return JSON.parse(JSON.stringify(data))
+        })
+        .catch((err) => console.log(err));
+})
 
 module.exports = joinLeague

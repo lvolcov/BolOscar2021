@@ -39,7 +39,7 @@ bot.use( async (ctx) => {
     const replyObject = ctx.update.message.reply_to_message
     if (replyObject === undefined) {
         ''
-    }else if (replyObject.from.is_bot && Object.keys(possibleReplies).indexOf(replyObject.text) !== '-1'){
+    }else if (replyObject.from.is_bot && Object.keys(possibleReplies).indexOf(replyObject.text) !== -1){
         ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id)
         ctx.telegram.deleteMessage(replyObject.chat.id, replyObject.message_id+1)
         answers[possibleReplies[replyObject.text]](ctx)

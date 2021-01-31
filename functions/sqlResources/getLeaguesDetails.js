@@ -1,21 +1,12 @@
-var mysql = require('mysql');
+const knex = require('./dbconnectionKnex');
 
 const getLeaguesDetails = (telegramID) => {
-  var con = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
-  });
-  const query = `SELECT * FROM Ligas WHERE TelegramIDParticipante = ${telegramID}`
-  return new Promise( ( resolve, reject ) => {
-    con.query(query, (err, result, fields) => {
-      if (err)
-      throw err;
-      resolve(JSON.parse(JSON.stringify(result)));
-    });
-    con.end()
-  })
+  return knex('Ligas')
+        .where('TelegramIDParticipante', telegramID)
+        .then(data => {
+          return JSON.parse(JSON.stringify(data))
+        })
+        .catch((err) => console.log(err));
 }
 
 module.exports = getLeaguesDetails

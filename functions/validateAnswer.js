@@ -1,6 +1,6 @@
 const validateAnswer = ((answer) => {
     
-    const format = /[!@#$%^&*()+\=\[\]{};':"\\|,.<>\/?]+/;
+    const format = /[^a-z0-9 ]/gi;
     if (answer.length > 16){
         return '❌ Nome muito longo ! ❌'
     }else if (answer.length < 6) {

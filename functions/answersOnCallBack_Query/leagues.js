@@ -14,12 +14,12 @@ const leagues = (async (ctx) => {
             ctx.answerCbQuery(called, {text : "✅ Liga criada !", show_alert : true});
             break;
         case 'joinLeagueYes':
-            await sqlFunctions.createLeague(previousInfo, telegramID);
+            await sqlFunctions.joinLeague(previousInfo, telegramID);
             ctx.answerCbQuery(called, {text : `✅ Você agora está participando da Liga ${previousInfo}!`, show_alert : true});
             break;
     }
 
-    const info = await sqlFunctions.getLeaguesList(telegramID)
+    const info = await sqlFunctions.getLeaguesDetails(telegramID)
     const infoMenu = []
     
     if (info[0] === undefined) {

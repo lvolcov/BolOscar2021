@@ -1,21 +1,13 @@
-var mysql = require('mysql');
+const knex = require('./dbconnectionKnex');
 
 const getNamesExistingLeagues = () => {
-  var con = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
-  });
-  const query = `SELECT NomeLiga FROM Ligas GROUP BY NomeLiga`
-  return new Promise( ( resolve, reject ) => {
-    con.query(query, (err, result, fields) => {
-      if (err)
-      throw err;
-      resolve(JSON.parse(JSON.stringify(result.map((elem) => elem.NomeLiga))));
-    });
-    con.end()
-  })
+  return knex('Ligas')
+        .select('NomeLiga')
+        .groupBy('NomeLiga')
+        .then(data => {
+          return JSON.parse(JSON.stringify(data.map((elem) => elem.NomeLiga)))
+        })
+        .catch((err) => console.log(err));
 }
 
 module.exports = getNamesExistingLeagues

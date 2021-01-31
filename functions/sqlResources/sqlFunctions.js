@@ -9,6 +9,9 @@ const getVotes = require('./getVotes')
 const joinLeague = require('./joinLeague')
 const postVote = require('./postVote')
 const updateWinnersTable = require('./updateWinnersTable')
+const getLeaguesAmountUsers = require('./getLeaguesAmountUsers')
+const getLeaguesOwner = require('./getLeaguesOwner')
+
 
 module.exports = {
     changeName,
@@ -22,4 +25,6 @@ module.exports = {
     joinLeague,
     postVote,
     updateWinnersTable,
+    getLeaguesAmountUsers,
+    getLeaguesOwner,
 }
