@@ -1,4 +1,4 @@
-const con = require('knex')({
+const knex = require('knex')({
     client: 'mysql',
     connection: {
         host: process.env.HOST,
@@ -10,4 +10,6 @@ const con = require('knex')({
   });
 
 
-module.exports = con;
+module.exports = knex;
+
+// https://stackfame.com/knexjs-complete-tutorial
