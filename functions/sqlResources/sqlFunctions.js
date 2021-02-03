@@ -11,7 +11,12 @@ const postVote = require('./postVote')
 const updateWinnersTable = require('./updateWinnersTable')
 const getLeaguesAmountUsers = require('./getLeaguesAmountUsers')
 const getLeaguesOwner = require('./getLeaguesOwner')
-
+const changeLeaguePrivacy = require('./changeLeaguePrivacy')
+const changeLeagueName = require('./changeLeagueName')
+const getLeaguePlayersList = require('./getLeaguePlayersList')
+const leftLeague = require('./leftLeague')
+const getPublicLeaguesInfo = require('./getPublicLeaguesInfo')
+const getPrivacy = require('./getPrivacy')
 
 module.exports = {
     changeName,
@@ -27,4 +32,10 @@ module.exports = {
     updateWinnersTable,
     getLeaguesAmountUsers,
     getLeaguesOwner,
+    changeLeaguePrivacy,
+    changeLeagueName,
+    getLeaguePlayersList,
+    leftLeague,
+    getPublicLeaguesInfo,
+    getPrivacy,
 }

@@ -33,6 +33,7 @@ bot.on('callback_query', async (ctx) => {
 
 bot.use(async (ctx) => {
 
+    //TENTANDO ENVIAR IMAGEM
     // if (ctx.update.message.from.id = process.env.MY_TELEGRAM_ID) {
     //     const photo = fs.readFileSync('./shareResources/choicesImg2.svg', 'utf8');
     //     await ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:")
@@ -49,6 +50,8 @@ bot.use(async (ctx) => {
         "Qual o seu novo nome para o Ranking?": 'newRankingName',
         "Qual será o nome da sua liga?": 'createLeagueName',
         "Qual o nome da Liga que você deseja participar?": 'joinLeagueName',
+        "Qual será o novo nome da sua liga?": 'changeLeagueName',
+        "Qual liga você deseja sair?": 'leftLeague'
     }
     const replyObject = ctx.update.message.reply_to_message
     if (replyObject === undefined) {
