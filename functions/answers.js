@@ -1,4 +1,5 @@
 const start = require('./start')
+
 const cat = require('./answersOnCallBack_Query/cat')
 const ind = require('./answersOnCallBack_Query/ind')
 const volCategoria = require('./answersOnCallBack_Query/volCategoria')
@@ -31,6 +32,13 @@ const joinLeagueName = require('./answersUse/joinLeagueName')
 const newRankingName = require('./answersUse/newRankingName')
 const changeLeagueName = require('./answersUse/changeLeagueName')
 const leftLeague = require('./answersUse/leftLeague')
+
+const choicesAll = require('./share/choicesAll')
+const shareMenu = require('./share/shareMenu')
+
+const adminMenu = require('./admin/adminMenu')
+const updatePoints = require('./admin/updatePoints')
+
 
 module.exports = {
     start,
@@ -65,5 +73,9 @@ module.exports = {
     leaguePlayersList,
     leftLeagueGetName,
     publicLeagues,
+    choicesAll,
+    shareMenu,
+    adminMenu,
+    updatePoints,
 }
 

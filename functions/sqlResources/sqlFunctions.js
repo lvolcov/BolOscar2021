@@ -17,6 +17,9 @@ const getLeaguePlayersList = require('./getLeaguePlayersList')
 const leftLeague = require('./leftLeague')
 const getPublicLeaguesInfo = require('./getPublicLeaguesInfo')
 const getPrivacy = require('./getPrivacy')
+const getWinners = require('./getWinners')
+const updatePoints = require('./updatePoints')
+const setPointstoZero = require('./setPointstoZero')
 
 module.exports = {
     changeName,
@@ -38,4 +41,7 @@ module.exports = {
     leftLeague,
     getPublicLeaguesInfo,
     getPrivacy,
+    getWinners,
+    updatePoints,
+    setPointstoZero,
 }
