@@ -7,7 +7,7 @@ const manageLeagues = (async (ctx) => {
 
     if (previousInfo[0] === "changeTo") {
         await sqlFunctions.changeLeaguePrivacy(telegramID, previousInfo[1])
-        const privacy = previousInfo[1] == 0 ? "Pública 🌎" : "Privada 🔑"
+        const privacy = previousInfo[1] == 0 ? "Privada 🔑" : "Pública 🌎"
         ctx.answerCbQuery(called, { text: `✅ Sua liga agora é ${privacy}!`, show_alert: true })
     } else if (previousInfo[0] && previousInfo[0] !== "deleteLastMessage") {
         await sqlFunctions.changeLeagueName(telegramID, previousInfo.join(" "))

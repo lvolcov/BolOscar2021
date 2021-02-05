@@ -4,7 +4,7 @@
       "nomeCompleto": "Melhor Filme",
       "nomeMenu": "Filme",
       "nomeResumido": "catFilme",
-      "vencedor": "vencedor",
+      "vencedor": "indFilParasita",
       "peso": 80,
       "indicados": {
         "indFilFord": {
@@ -49,7 +49,7 @@
       "nomeCompleto": "Melhor Direção",
       "nomeMenu": "Direção",
       "nomeResumido": "catDirecao",
-      "vencedor": "vencedor",
+      "vencedor": "indDirBong",
       "peso": 70,
       "indicados": {
         "indDirScorcese": {
@@ -78,7 +78,7 @@
       "nomeCompleto": "Melhor Fotografia",
       "nomeMenu": "Dir. Fotografia",
       "nomeResumido": "catFotografia",
-      "vencedor": "vencedor",
+      "vencedor": "indFot1917",
       "peso": 60,
       "indicados": {
         "indFotIrlandes": {
@@ -107,7 +107,7 @@
       "nomeCompleto": "Melhor Design de Produção",
       "nomeMenu": "Dir. Arte",
       "nomeResumido": "catArte",
-      "vencedor": "vencedor",
+      "vencedor": "indArtHollywood",
       "peso": 60,
       "indicados": {
         "indArtIrlandes": {
@@ -136,7 +136,7 @@
       "nomeCompleto": "Melhor Roteiro Adaptado",
       "nomeMenu": "Roteiro Adaptado",
       "nomeResumido": "catrotAdapt",
-      "vencedor": "vencedor",
+      "vencedor": "indRadJojo",
       "peso": 60,
       "indicados": {
         "indRadIrlandes": {
@@ -165,7 +165,7 @@
       "nomeCompleto": "Melhor Roteiro Original",
       "nomeMenu": "Roteiro Original",
       "nomeResumido": "catrotOrig",
-      "vencedor": "vencedor",
+      "vencedor": "indRorParasita",
       "peso": 60,
       "indicados": {
         "indRorFacas": {
@@ -194,7 +194,7 @@
       "nomeCompleto": "Melhor Atriz",
       "nomeMenu": "Atriz",
       "nomeResumido": "catAtriz",
-      "vencedor": "vencedor",
+      "vencedor": "indAtzRenee",
       "peso": 60,
       "indicados": {
         "indAtzCynthia": {
@@ -223,7 +223,7 @@
       "nomeCompleto": "Melhor Ator",
       "nomeMenu": "Ator",
       "nomeResumido": "catAtor",
-      "vencedor": "vencedor",
+      "vencedor": "indAtrPhoenix",
       "peso": 60,
       "indicados": {
         "indAtrBanderas": {
@@ -252,7 +252,7 @@
       "nomeCompleto": "Melhor Atriz Coadjuvante",
       "nomeMenu": "Atriz Coadjuvante",
       "nomeResumido": "catAtrizCoad",
-      "vencedor": "vencedor",
+      "vencedor": "indAzcDern",
       "peso": 50,
       "indicados": {
         "indAzcKathy": {
@@ -281,7 +281,7 @@
       "nomeCompleto": "Melhor Ator Coadjuvante",
       "nomeMenu": "Ator Coadjuvante",
       "nomeResumido": "catAtorCoad",
-      "vencedor": "vencedor",
+      "vencedor": "indArcPitt",
       "peso": 50,
       "indicados": {
         "indArcHanks": {
@@ -310,7 +310,7 @@
       "nomeCompleto": "Melhores Efeitos Visuais",
       "nomeMenu": "Efeitos Visuais",
       "nomeResumido": "catEfeitos",
-      "vencedor": "vencedor",
+      "vencedor": "indEfe1917",
       "peso": 40,
       "indicados": {
         "indEfeVingadores": {
@@ -339,7 +339,7 @@
       "nomeCompleto": "Melhor Edição",
       "nomeMenu": "Edição",
       "nomeResumido": "catEdicao",
-      "vencedor": "vencedor",
+      "vencedor": "indEdiFord",
       "peso": 40,
       "indicados": {
         "indEdiFord": {
@@ -368,7 +368,7 @@
       "nomeCompleto": "Melhor  Animação",
       "nomeMenu": "Animação",
       "nomeResumido": "catAnimacao",
-      "vencedor": "vencedor",
+      "vencedor": "indAniToy",
       "peso": 40,
       "indicados": {
         "indAniDragao": {
@@ -397,7 +397,7 @@
       "nomeCompleto": "Melhor Longa Estrangeiro",
       "nomeMenu": "Estrangeiro",
       "nomeResumido": "catEstrangeiro",
-      "vencedor": "vencedor",
+      "vencedor": "indEstParasita",
       "peso": 40,
       "indicados": {
         "indEstCorpus": {
@@ -426,7 +426,7 @@
       "nomeCompleto": "Melhor Mixagem de Som",
       "nomeMenu": "Mixagem de Som",
       "nomeResumido": "catMixSom",
-      "vencedor": "vencedor",
+      "vencedor": "indMix1917",
       "peso": 30,
       "indicados": {
         "indMixAstra": {
@@ -455,7 +455,7 @@
       "nomeCompleto": "Melhor Edição de Som",
       "nomeMenu": "Edição de Som",
       "nomeResumido": "catEdiSom",
-      "vencedor": "vencedor",
+      "vencedor": "indEsoFord",
       "peso": 30,
       "indicados": {
         "indEsoFord": {
@@ -484,7 +484,7 @@
       "nomeCompleto": "Melhor Figurino",
       "nomeMenu": "Figurino",
       "nomeResumido": "catFigurino",
-      "vencedor": "vencedor",
+      "vencedor": "indFigAdoraveis",
       "peso": 30,
       "indicados": {
         "indFigIrlandes": {
@@ -513,7 +513,7 @@
       "nomeCompleto": "Melhor Maquiagem e Cabelo",
       "nomeMenu": "Maquiagem",
       "nomeResumido": "catMaquiagem",
-      "vencedor": "vencedor",
+      "vencedor": "indMaqEscandalo",
       "peso": 30,
       "indicados": {
         "indMaqEscandalo": {
@@ -542,7 +542,7 @@
       "nomeCompleto": "Melhor Documentário em Longa-Metragem",
       "nomeMenu": "Documentário",
       "nomeResumido": "catDocumentario",
-      "vencedor": "vencedor",
+      "vencedor": "indDocAmerican",
       "peso": 30,
       "indicados": {
         "indDocAmerican": {
@@ -571,7 +571,7 @@
       "nomeCompleto": "Melhor Trilha Sonora",
       "nomeMenu": "Trilha Sonora",
       "nomeResumido": "catTrilha",
-      "vencedor": "vencedor",
+      "vencedor": "indTriCoringa",
       "peso": 20,
       "indicados": {
         "indTriCoringa": {
@@ -600,7 +600,7 @@
       "nomeCompleto": "Melhor Curta-Metragem",
       "nomeMenu": "Curta-Metragem",
       "nomeResumido": "catCurta",
-      "vencedor": "vencedor",
+      "vencedor": "indCrtWindow",
       "peso": 20,
       "indicados": {
         "indCrtBrotherhood": {
@@ -629,7 +629,7 @@
       "nomeCompleto": "Melhor Canção Original",
       "nomeMenu": "Canção Original",
       "nomeResumido": "catMusica",
-      "vencedor": "vencedor",
+      "vencedor": "indMusRocketman",
       "peso": 10,
       "indicados": {
         "indMusToy": {
@@ -658,7 +658,7 @@
       "nomeCompleto": "Melhor Curta em Animação",
       "nomeMenu": "Anim. Curta-Metragem",
       "nomeResumido": "catAnimacaoCurta",
-      "vencedor": "vencedor",
+      "vencedor": "indActHair",
       "peso": 10,
       "indicados": {
         "indActDcera": {
@@ -687,7 +687,7 @@
       "nomeCompleto": "Melhor Documentário em Curta-Metragem",
       "nomeMenu": "Doc. Curta-Metragem",
       "nomeResumido": "catDocCurta",
-      "vencedor": "vencedor",
+      "vencedor": "indDctSkate",
       "peso": 10,
       "indicados": {
         "indDctAbsense": {
