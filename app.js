@@ -65,11 +65,9 @@ bot.use(async (ctx) => {
     returnSvg = returnSvg.replace('pontosTotal', pontos)
     let choicesImg64 = fs.readFileSync('./shareResources/choicesImg64.txt').toString()
     returnSvg = returnSvg.replace('COLAchoicesImg64', choicesImg64)
-    choicesImg64 = ''
 
     let checkCertoErradoImg64 = fs.readFileSync('./shareResources/checkCertoErradoImg64.txt').toString()
     returnSvg = returnSvg.replace('COLAcheckCertoErradoImg64', checkCertoErradoImg64)
-    checkCertoErradoImg64 = ''
 
     await sharp(Buffer.from(returnSvg), { density: 200 })
         .jpeg()
