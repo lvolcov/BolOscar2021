@@ -1,11 +1,9 @@
 const sqlFunctions = require('./sqlResources/sqlFunctions')
-const menuInicialText = require('..//textsMenus/menuInicial')
 const db = require('../db.json');
 
 const menuInicial = (async (ctx) => {
     const telegramID = ctx.update.message.from.id
     const info = await sqlFunctions.getVotes(telegramID)
-    ctx.deleteMessage()
     const menuInicialBotoes = []
     const voted = []
     let nome
@@ -24,7 +22,6 @@ const menuInicial = (async (ctx) => {
     }
     voted.length === 0 ? menuInicialBotoes.push([{ text: "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria" }]) : menuInicialBotoes.push([{ text: "Continuar Palpites", callback_data: "volCategoria" }, { text: "Revisar Palpites", callback_data: "voted" }])
     menuInicialBotoes.push([{ text: "Ligas", callback_data: "leagues" }, { text: "Mais info", callback_data: "moreInfo" }], [{ text: "Compartilhar", callback_data: "shareMenu" }])
-    await ctx.reply(menuInicialText(nome.split(" ")[0]))
     await ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", { reply_markup: { inline_keyboard: menuInicialBotoes } })
 })
 
