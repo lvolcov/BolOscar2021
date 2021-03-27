@@ -862,7 +862,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="657.5483"
+     inkscape:cx="508.5483"
      inkscape:cy="961.39133"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -1219,7 +1219,7 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;font-family:serif;-inkscape-font-specification:'serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444">Filme</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444;"
        x="42.103737"
        y="123.87692"
        id="text1825-1"><tspan
@@ -1229,7 +1229,7 @@
          y="123.87692">Direção</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444;"
        x="42.103737"
        y="131.08374"
        id="text1825-0"><tspan
@@ -1419,7 +1419,7 @@
          y="258.862">Canção Original</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.194444;"
        x="42.103737"
        y="265.6799"
        id="text1825-1-96"><tspan
@@ -1675,15 +1675,15 @@
        transform="matrix(0.26823799,0,0,0.36759351,147.47396,277.55866)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.10722px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#af8605;fill-opacity:1;stroke-width:0.26323"
-       x="88.675049"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.10722px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#af8605;fill-opacity:1;stroke-width:0.26323"
+       x="87.119507"
        y="284.21487"
        id="text1825-1-24-5-0"><tspan
          sodipodi:role="line"
          id="tspan2845"
-         x="88.675049"
+         x="87.119507"
          y="284.21487"
-         style="stroke-width:0.26323">Pontuação Total :</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.10722px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.26323">Pontuação Total :</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.31688px;line-height:125%;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.228708"
