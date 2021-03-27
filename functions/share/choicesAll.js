@@ -23,7 +23,7 @@ const choicesAll = (async (ctx) => {
 
         //Passa o nome do palpite pra imagem
         if (info[0][elem] !== "0") {
-            const result = db.categorias[elem].indicados[info[0][elem]].nomeCompleto.length > 21 ? String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto.substring(0, 19) + '...') : db.categorias[elem].indicados[info[0][elem]].nomeCompleto
+            const result = db.categorias[elem].indicados[info[0][elem]].nomeCompleto.length > 19 ? String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto.substring(0, 18) + '...') : db.categorias[elem].indicados[info[0][elem]].nomeCompleto
             returnSvg = returnSvg.replace(reWord, result)
         } else {
             returnSvg = returnSvg.replace(reWord, '')
