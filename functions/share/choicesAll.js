@@ -9,6 +9,12 @@ const choicesAll = (async (ctx) => {
     const telegramID = ctx.update.callback_query.from.id
     const info = await sqlFunctions.getVotes(telegramID)
 
+    const winnersRaw = await sqlFunctions.getWinners()
+    let winners = {}
+    winnersRaw.map(elem => {
+        winners[elem.Categoria] = { vencedor: elem.Vencedor, pontos: elem.Pontos, jaFoi: elem.JaFoi }
+    })
+
     let pontos = 0
     Object.keys(info[0]).slice(4).map((elem, index) => {
         const rePoints = new RegExp(String('z' + index + 'abc'), "g");
@@ -17,18 +23,20 @@ const choicesAll = (async (ctx) => {
 
         //Passa o nome do palpite pra imagem
         if (info[0][elem] !== "0") {
-            const result = db.categorias[elem].indicados[info[0][elem]].nomeCompleto.length > 20 ? String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto.substring(0, 18) + '...') : db.categorias[elem].indicados[info[0][elem]].nomeCompleto
+            const result = db.categorias[elem].indicados[info[0][elem]].nomeCompleto.length > 20 ? String(db.categorias[elem].indicados[info[0][elem]].nomeCompleto.substring(0, 16) + '...') : db.categorias[elem].indicados[info[0][elem]].nomeCompleto
             returnSvg = returnSvg.replace(reWord, result)
         } else {
-            returnSvg = returnSvg.replace(reWord, 'Ainda não votado')
+            returnSvg = returnSvg.replace(reWord, '')
         }
 
         //Passa a pontuacao ou o erro ou a interrogacao pra imagem
-        if (info[0][elem] !== "0" && db.categorias[elem].vencedor === db.categorias[elem].indicados[info[0][elem]].nomeResumido) {
+        if (info[0][elem] !== "0" && winners[elem].vencedor === db.categorias[elem].indicados[info[0][elem]].nomeResumido) {
             returnSvg = returnSvg.replace(rePoints, String(db.categorias[elem].peso))
-            returnSvg = returnSvg.replace(reColor, '1cb333')
+            returnSvg = returnSvg.replace(reColor, '866d0d')
             pontos += db.categorias[elem].peso
-        } else if (db.categorias[elem].vencedor === 'vencedor') {
+        } else if (info[0][elem] == "0") {
+            returnSvg = returnSvg.replace(rePoints, '')
+        } else if (winners[elem].jaFoi === 'N') {
             returnSvg = returnSvg.replace(rePoints, ' ❓')
             returnSvg = returnSvg.replace(reColor, '000000')
         } else {

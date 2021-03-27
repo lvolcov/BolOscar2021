@@ -7,13 +7,14 @@ const volCategoria = (async (ctx) => {
 
     const info = await sqlFunctions.getVotes(telegramID)
     const nonVoted = []
-    Object.keys(info[0]).slice(4).map((elem, index) =>{
-        info[0][elem] === "0" ? nonVoted.push({text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido}) : ""
+    Object.keys(info[0]).slice(4).map((elem, index) => {
+        info[0][elem] === "0" ? nonVoted.push({ text: db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido }) : ""
         return 0
     })
     const result = geraLista(nonVoted)
     result.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }])
-    ctx.telegram.sendMessage(ctx.chat.id, "Selecione a categoria:", {reply_markup: {inline_keyboard: result}})
+    nonVoted.length == 0 ? ctx.telegram.sendMessage(ctx.chat.id, "Parabéns, você votou em todas as categorias!", { reply_markup: { inline_keyboard: result } }) : ctx.telegram.sendMessage(ctx.chat.id, "Selecione a categoria para palpitar:", { reply_markup: { inline_keyboard: result } })
+
 })
 
 module.exports = volCategoria

@@ -5,7 +5,7 @@
       "nomeMenu": "Filme",
       "nomeMenuEn": "Best Picture",
       "nomeResumido": "catFilme",
-      "peso": 80,
+      "peso": 90,
       "indicados": {
         "indFilPai": {
           "nomeCompleto": "Meu Pai",
@@ -54,7 +54,7 @@
       "nomeMenu": "Direção",
       "nomeMenuEn": "Directing",
       "nomeResumido": "catDirecao",
-      "peso": 70,
+      "peso": 80,
       "indicados": {
         "indDirVinterberg": {
           "nomeCompleto": "Thomas Vinterberg - Druk: Mais uma Rodada",
@@ -156,7 +156,7 @@
       "nomeMenu": "Roteiro Adaptado",
       "nomeMenuEn": "Writing (Adapted Screenplay)",
       "nomeResumido": "catrotAdapt",
-      "peso": 60,
+      "peso": 70,
       "indicados": {
         "indRadBorat": {
           "nomeCompleto": "Borat: Fita de Cinema Seguinte",
@@ -190,7 +190,7 @@
       "nomeMenu": "Roteiro Original",
       "nomeMenuEn": "Writing (Original Screenplay)",
       "nomeResumido": "catrotOrig",
-      "peso": 60,
+      "peso": 70,
       "indicados": {
         "indRorMessias": {
           "nomeCompleto": "Judas e o Messias Negro",

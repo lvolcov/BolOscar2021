@@ -22,11 +22,13 @@ const menuInicial = (async (ctx) => {
     }
     if (voted.length === 0) {
         menuInicial.push([{ text: "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria" }])
+    } else if (voted.length === 23) {
+        menuInicial.push([{ text: "Revisar Palpites", callback_data: "voted" }])
     } else {
         menuInicial.push([{ text: "Continuar Palpites", callback_data: "volCategoria" }, { text: "Revisar Palpites", callback_data: "voted" }])
     }
 
-    menuInicial.push([{ text: "Ligas", callback_data: "leagues" }, { text: "Mais info", callback_data: "moreInfo" }], [{ text: "Compartilhar", callback_data: "shareMenu" }])
+    menuInicial.push([{ text: "Ligas", callback_data: "leagues" }, { text: "Mais info", callback_data: "moreInfo" }], [{ text: "Compartilhar seus Palpites", callback_data: "shareMenu" }])
     ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", { reply_markup: { inline_keyboard: menuInicial } })
 })
 

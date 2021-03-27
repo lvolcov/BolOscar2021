@@ -23,7 +23,7 @@ const manageLeagues = (async (ctx) => {
 
 
     infoMenu.push([{ text: '⇦   ⇦   ⇦   Voltar para Ligas', callback_data: 'leagues' }])
-    ctx.telegram.sendMessage(ctx.chat.id, String("Gerenciar liga " + ownLeague[0].NomeLiga + ":"), { reply_markup: { inline_keyboard: infoMenu } })
+    ctx.telegram.sendMessage(ctx.chat.id, String('Gerenciar liga "' + ownLeague[0].NomeLiga + '":'), { reply_markup: { inline_keyboard: infoMenu } })
 })
 
 module.exports = manageLeagues

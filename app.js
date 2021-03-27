@@ -39,7 +39,6 @@ bot.on('callback_query', async (ctx) => {
 bot.use(async (ctx) => {
     ctx.deleteMessage()
 
-    console.log(ctx.update.message.message_id)
     const possibleReplies = {
         "Qual o seu novo nome para o Ranking?": 'newRankingName',
         "Qual será o nome da sua liga?": 'createLeagueName',
@@ -48,7 +47,6 @@ bot.use(async (ctx) => {
         "Qual liga você deseja sair?": 'leftLeague'
     }
     const replyObject = ctx.update.message.reply_to_message
-    console.log(replyObject.message_id)
     if (replyObject === undefined) {
         ''
     } else if (replyObject.from.is_bot && Object.keys(possibleReplies).indexOf(replyObject.text) !== -1) {

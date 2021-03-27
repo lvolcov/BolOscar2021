@@ -35,6 +35,7 @@ const leftLeague = require('./answersUse/leftLeague')
 
 const choicesAll = require('./share/choicesAll')
 const shareMenu = require('./share/shareMenu')
+const mainCategories = require('./share/mainCategories')
 
 const adminMenu = require('./admin/adminMenu')
 const updatePoints = require('./admin/updatePoints')
@@ -75,6 +76,7 @@ module.exports = {
     publicLeagues,
     choicesAll,
     shareMenu,
+    mainCategories,
     adminMenu,
     updatePoints,
 }

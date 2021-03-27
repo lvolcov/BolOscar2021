@@ -15,21 +15,21 @@ const ind = (async (ctx) => {
     const info = await sqlFunctions.getVotes(telegramID)
     const nonVoted = []
     const voted = []
-    ctx.answerCbQuery(called, {text : '✅ Pitaco Contabilizado', show_alert : true})
+    ctx.answerCbQuery(called, { text: '✅ Pitaco Contabilizado', show_alert: true })
 
-    Object.keys(info[0]).slice(4).map((elem, index) =>{
-        if(info[0][elem] === "0"){
-            nonVoted.push({text : db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido})
-        }else{
-            voted.push([{text : String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " " + previousInfo)}])
+    Object.keys(info[0]).slice(4).map((elem, index) => {
+        if (info[0][elem] === "0") {
+            nonVoted.push({ text: db.categorias[elem].nomeMenu, callback_data: db.categorias[elem].nomeResumido })
+        } else {
+            voted.push([{ text: String(db.categorias[elem].nomeMenu + ": " + db.categorias[elem].indicados[info[0][elem]].nomeCompleto), callback_data: String(db.categorias[elem].nomeResumido + " " + previousInfo) }])
         }
         return 0
     })
 
     const result = previousInfo === "voltaMenuJaVotados" ? voted : geraLista(nonVoted)
-    result.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial'}])
+    result.push([{ text: '⇦   ⇦   ⇦   Voltar para o menu inicial', callback_data: 'menuInicial' }])
 
-    ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", {reply_markup: {inline_keyboard: result}})
+    nonVoted.length == 0 ? ctx.telegram.sendMessage(ctx.chat.id, "Parabéns, você votou em todas as categorias!", { reply_markup: { inline_keyboard: result } }) : ctx.telegram.sendMessage(ctx.chat.id, "Selecione a categoria para palpitar:", { reply_markup: { inline_keyboard: result } })
 })
 
 module.exports = ind

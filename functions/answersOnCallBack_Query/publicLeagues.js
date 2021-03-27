@@ -11,7 +11,7 @@ const publicLeagues = (async (ctx) => {
         message.push([elem.NomeLiga, elem.Participantes])
     })
 
-    const config = { border: table.getBorderCharacters('ramac'), columns: { 0: { width: 18, wrapWord: true }, 1: { width: 15, alignment: 'center', wrapWord: true } } }
+    const config = { border: table.getBorderCharacters('ramac'), columns: { 0: { width: 15, wrapWord: true }, 1: { width: 13, alignment: 'center', wrapWord: true } } }
     const messageTable = String("<pre>" + table.table(message, config) + "</pre>");
 
     await ctx.telegram.sendMessage(ctx.chat.id, String("🌎\n\nLista das Ligas Públicas:\n\n" + messageTable),
