@@ -37,10 +37,10 @@ const choicesAll = (async (ctx) => {
         } else if (info[0][elem] == "0") {
             returnSvg = returnSvg.replace(rePoints, '')
         } else if (winners[elem].jaFoi === 'N') {
-            returnSvg = returnSvg.replace(rePoints, ' ❓')
+            returnSvg = returnSvg.replace(rePoints, ' ?')
             returnSvg = returnSvg.replace(reColor, '000000')
         } else {
-            returnSvg = returnSvg.replace(rePoints, ' ❌')
+            returnSvg = returnSvg.replace(rePoints, ' X')
             returnSvg = returnSvg.replace(reColor, 'ff0000')
         }
         return 0
