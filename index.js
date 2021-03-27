@@ -1,6 +1,11 @@
 //http://49.213.81.43/static/tool/thuocbot/node_modules/telegraf/docs/#/
-const { Telegraf } = require('telegraf')
-const bot = new Telegraf(process.env.BOT_TOKEN)
+// const { Telegraf } = require('telegraf')
+// const bot = new Telegraf(process.env.BOT_TOKEN)
+
+const { Composer } = require('micro-bot')
+const bot = new Composer
+
+
 const answers = require('./functions/answers')
 
 bot.start(async (ctx) => {
@@ -56,4 +61,5 @@ bot.use(async (ctx) => {
     }
 })
 
-bot.launch()
+module.exports = bot
+// bot.launch()

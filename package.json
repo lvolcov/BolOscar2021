@@ -2,10 +2,11 @@
   "name": "telegramboloscarbot",
   "version": "1.0.0",
   "description": "Bot de telegram para um bolao do oscar",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
+    "start": "micro-bot",
     "test": "node -r dotenv/config test.js",
-    "dev": "node -r dotenv/config app.js"
+    "dev": "node -r dotenv/config index.js"
   },
   "keywords": [],
   "author": "@GuedsLucas e @Lvolcov",
@@ -14,6 +15,7 @@
     "@svgdotjs/svg.js": "^3.0.16",
     "custom-env": "^2.0.1",
     "knex": "^0.21.17",
+    "micro-bot": "^2.5.3",
     "mysql": "^2.18.1",
     "sharp": "^0.27.1",
     "table": "^6.0.7",
