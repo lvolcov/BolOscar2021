@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1080"
+   height="1920"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="leagueRanking_light.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="44.722222"
+       y="94.055556"
+       width="121.33333"
+       height="22.166667"
+       id="rect1577" />
+    <rect
+       x="66.811769"
+       y="163.62293"
+       width="44.691656"
+       height="41.007286"
+       id="rect257" />
+    <rect
+       x="117.82346"
+       y="265.19488"
+       width="68.617493"
+       height="19.411528"
+       id="rect310" />
+    <rect
+       x="23.474405"
+       y="266.09774"
+       width="69.971785"
+       height="17.605804"
+       id="rect304" />
+    <rect
+       x="118.72632"
+       y="158.20576"
+       width="68.617493"
+       height="18.508666"
+       id="rect298" />
+    <rect
+       x="24.377267"
+       y="157.3029"
+       width="67.714631"
+       height="19.862958"
+       id="rect292" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect393"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="1.1739072,6.3482466"
+       sort_points="true"
+       interpolator_type="CentripetalCatmullRom"
+       interpolator_beta="0.75"
+       start_linecap_type="square"
+       linejoin_type="spiro"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="square" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect391"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.0032025118"
+       smooth_angles="0"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       step="1" />
+    <rect
+       x="41.983071"
+       y="102.22834"
+       width="126.40064"
+       height="170.18944"
+       id="rect59" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1">
+      <path
+         d="M 0,0 L 359.90929,0 L 359.90929,439.88913 L 0,439.88913 z"
+         id="path16142" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2">
+      <path
+         d="M 0.67779528,0.67779528 L 359.90929,0.67779528 L 359.90929,439.88913 L 0.67779528,439.88913 z"
+         id="path16145" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3">
+      <path
+         d="M 0.67779528,0.67779528 L 359.90929,0.67779528 L 359.90929,31.856378 L 0.67779528,31.856378 z"
+         id="path16148" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4">
+      <path
+         d="M 0.67773438,0.67773438 V 439.88867 H 359.91016 V 0.67773438 Z"
+         id="path16151" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-8">
+      <path
+         d="M 0,0 L 359.90929,0 L 359.90929,439.88913 L 0,439.88913 z"
+         id="path18154" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-9">
+      <path
+         d="M 0.67779528,0.67779528 L 359.90929,0.67779528 L 359.90929,439.88913 L 0.67779528,439.88913 z"
+         id="path18157" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-0">
+      <path
+         d="M 0.67779528,0.67779528 L 359.90929,0.67779528 L 359.90929,31.856378 L 0.67779528,31.856378 z"
+         id="path18160" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4-2">
+      <path
+         d="M 0.67773438,0.67773438 V 439.88867 H 359.91016 V 0.67773438 Z"
+         id="path18163" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-4"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect292-9" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect101" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect292-8" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect146" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect292-9-7" />
+    <rect
+       x="24.377268"
+       y="157.3029"
+       width="67.71463"
+       height="19.862959"
+       id="rect191" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-4">
+      <path
+         d="M 0,0 L 527.64593,0 L 527.64593,644.90058 L 0,644.90058 z"
+         id="path198" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-1">
+      <path
+         d="M 0.99368348,0.99368348 L 527.64593,0.99368348 L 527.64593,644.90058 L 0.99368348,644.90058 z"
+         id="path201" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-7">
+      <path
+         d="M 0.99368348,0.99368348 L 527.64593,0.99368348 L 527.64593,46.703124 L 0.99368348,46.703124 z"
+         id="path204" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-1"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-2">
+      <path
+         d="M 0,0 L 485.91122,0 L 485.91122,644.90058 L 0,644.90058 z"
+         id="path1249" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-3">
+      <path
+         d="M 0.99368348,0.99368348 L 485.91122,0.99368348 L 485.91122,644.90058 L 0.99368348,644.90058 z"
+         id="path1252" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-6">
+      <path
+         d="M 0.99368348,0.99368348 L 485.91122,0.99368348 L 485.91122,46.703124 L 0.99368348,46.703124 z"
+         id="path1255" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-6"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-0">
+      <path
+         d="M 0,0 L 487.89859,0 L 487.89859,644.90058 L 0,644.90058 z"
+         id="path2242" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-6">
+      <path
+         d="M 0.99368348,0.99368348 L 487.89859,0.99368348 L 487.89859,644.90058 L 0.99368348,644.90058 z"
+         id="path2245" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-69">
+      <path
+         d="M 424.30285,0.99368348 L 486.90491,0.99368348 L 486.90491,46.703124 L 424.30285,46.703124 z"
+         id="path2248" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-42"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-6">
+      <path
+         d="M 0,0 L 497.83542,0 L 497.83542,644.90058 L 0,644.90058 z"
+         id="path3231" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-12">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,644.90058 L 0.99368348,644.90058 z"
+         id="path3234" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-5">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,46.703124 L 0.99368348,46.703124 z"
+         id="path3237" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-60"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-1">
+      <path
+         d="M 0,0 L 497.83542,0 L 497.83542,644.90058 L 0,644.90058 z"
+         id="path4232" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-31">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,644.90058 L 0.99368348,644.90058 z"
+         id="path4235" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-8">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,46.703124 L 0.99368348,46.703124 z"
+         id="path4238" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4-1">
+      <path
+         d="M 0.99414062,0.99414062 V 644.90039 H 497.83594 V 0.99414062 Z"
+         id="path4241" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-13"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-5">
+      <path
+         d="M 0,0 L 497.83542,0 L 497.83542,644.90058 L 0,644.90058 z"
+         id="path6244" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-8">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,644.90058 L 0.99368348,644.90058 z"
+         id="path6247" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-4">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,46.703124 L 0.99368348,46.703124 z"
+         id="path6250" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4-4">
+      <path
+         d="M 0.99414062,0.99414062 V 644.90039 H 497.83594 V 0.99414062 Z"
+         id="path6253" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-7"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-89">
+      <path
+         d="M 0,0 L 497.83542,0 L 497.83542,764.1426 L 0,764.1426 z"
+         id="path7250" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-5">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,764.1426 L 0.99368348,764.1426 z"
+         id="path7253" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-9">
+      <path
+         d="M 0.99368348,0.99368348 L 497.83542,0.99368348 L 497.83542,46.703124 L 0.99368348,46.703124 z"
+         id="path7256" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4-5">
+      <path
+         d="M 0.99414062,0.99414062 V 764.14258 H 497.83594 V 0.99414062 Z"
+         id="path7259" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-3"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-56">
+      <path
+         d="M 0,0 L 564.41222,0 L 564.41222,764.1426 L 0,764.1426 z"
+         id="path8248" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-0">
+      <path
+         d="M 0.99368348,0.99368348 L 564.41222,0.99368348 L 564.41222,764.1426 L 0.99368348,764.1426 z"
+         id="path8251" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-77">
+      <path
+         d="M 0.99368348,0.99368348 L 564.41222,0.99368348 L 564.41222,46.703124 L 0.99368348,46.703124 z"
+         id="path8254" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4-53">
+      <path
+         d="M 0.99414062,0.99414062 V 764.14258 H 564.41211 V 0.99414062 Z"
+         id="path8257" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-73"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-5" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-4" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-8" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-7" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-1" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-1" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-7" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-2" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-2" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-12" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-16" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-9" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-3" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-92" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-76" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-78" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-0" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-3" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-29" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-6" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-86" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-76" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-20" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-58" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-88" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-22" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-6" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-69" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-13" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-39" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-77" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-46" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-61" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-25" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-295" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-18" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-4" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-53" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-37" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-587" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-9" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-48" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-11" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect257-64" />
+    <rect
+       x="66.811768"
+       y="163.62292"
+       width="44.691654"
+       height="41.007286"
+       id="rect272-36" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46">
+      <path
+         d="M 0,0 L 564.41222,0 L 564.41222,764.1426 L 0,764.1426 z"
+         id="path822" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-59">
+      <path
+         d="M 0.99368348,0.99368348 L 564.41222,0.99368348 L 564.41222,764.1426 L 0.99368348,764.1426 z"
+         id="path825" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-3">
+      <path
+         d="M 0.99368348,0.99368348 L 564.41222,0.99368348 L 564.41222,46.703124 L 0.99368348,46.703124 z"
+         id="path828" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-0"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-06">
+      <path
+         d="M -0.99368348,-0.99368348 L 238.48404,-0.99368348 L 238.48404,21.861037 L -0.99368348,21.861037 z"
+         id="path2748" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-311">
+      <path
+         d="M 0,0 L 238.48404,0 L 238.48404,21.861037 L 0,21.861037 z"
+         id="path2751" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-90">
+      <path
+         d="M 0,0 V 21.861328 H 238.48438 V 0 Z"
+         id="path2754" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-5"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-7">
+      <path
+         d="M -0.99368348,-0.99368348 L 91.41888,-0.99368348 L 91.41888,21.861037 L -0.99368348,21.861037 z"
+         id="path3708" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-90">
+      <path
+         d="M 0,0 L 91.41888,0 L 91.41888,21.861037 L 0,21.861037 z"
+         id="path3711" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-05">
+      <path
+         d="M 0,0 V 21.861328 H 91.417969 V 0 Z"
+         id="path3714" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-74"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-6">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-3">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-1">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-8" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-6-7">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-0-2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-6-7-8">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-0-2-7" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-6-7-8-2">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-0-2-7-8" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-1-0">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-8-3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-46-1-0-3">
+      <path
+         d="M 0,0 H 564.41222 V 764.1426 H 0 Z"
+         id="path822-8-3-9" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-3">
+      <path
+         d="M 0,0 L 333.20253,0 L 333.20253,492.59326 L 0,492.59326 z"
+         id="path1598" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-51">
+      <path
+         d="M 0.75900349,0.75900349 L 333.20253,0.75900349 L 333.20253,492.59326 L 0.75900349,492.59326 z"
+         id="path1601" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-60">
+      <path
+         d="M 0.75976562,0.75976562 V 492.59375 H 333.20312 V 0.75976562 Z"
+         id="path1604" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-9"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-9">
+      <path
+         d="M 0,0 L 425.04195,0 L 425.04195,492.59326 L 0,492.59326 z"
+         id="path1908" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-38">
+      <path
+         d="M 0.75900349,0.75900349 L 425.04195,0.75900349 L 425.04195,492.59326 L 0.75900349,492.59326 z"
+         id="path1911" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-76">
+      <path
+         d="M 0.75976562,0.75976562 V 492.59375 H 425.04102 V 0.75976562 Z"
+         id="path1914" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-2"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68">
+      <path
+         d="M 0,0 L 425.04195,0 L 425.04195,492.59326 L 0,492.59326 z"
+         id="path2218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2-30">
+      <path
+         d="M 0.75900349,0.75900349 L 425.04195,0.75900349 L 425.04195,492.59326 L 0.75900349,492.59326 z"
+         id="path2221" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3-00">
+      <path
+         d="M 0.75976562,0.75976562 V 492.59375 H 425.04102 V 0.75976562 Z"
+         id="path2224" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern-24"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68-6">
+      <path
+         d="M 0,0 H 425.04195 V 492.59326 H 0 Z"
+         id="path2218-9" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68-1">
+      <path
+         d="M 0,0 H 425.04195 V 492.59326 H 0 Z"
+         id="path2218-6" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68-1-9">
+      <path
+         d="M 0,0 H 425.04195 V 492.59326 H 0 Z"
+         id="path2218-6-2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68-5">
+      <path
+         d="M 0,0 H 425.04195 V 492.59326 H 0 Z"
+         id="path2218-8" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-68-10">
+      <path
+         d="M 0,0 H 425.04195 V 492.59326 H 0 Z"
+         id="path2218-2" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="258.29889"
+     inkscape:cy="823.41308"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1718"
+     inkscape:window-height="1351"
+     inkscape:window-x="1712"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:snap-text-baseline="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       width="210"
+       height="373.33334"
+       preserveAspectRatio="none"
+       xlink:href=ColaImg64
+       id="image1557"
+       x="0"
+       y="-38.166668" />
+    <text
+       xml:space="preserve"
+       id="text1575"
+       style="fill:#1a1a1a;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:1.8;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:justify;white-space:pre;shape-inside:url(#rect1577);"
+       x="0"
+       y="0"
+       transform="translate(-0.77777778,0.77777781)"><tspan
+         x="50.37207"
+         y="108.16374"><tspan
+           style="text-align:center;text-anchor:middle">      nameLeague      </tspan></tspan></text>
+    <rect
+       style="fill:none;stroke:none;stroke-width:0.194444"
+       id="rect1590"
+       width="128.72221"
+       height="27.222221"
+       x="40.444443"
+       y="92.5" />
+    <path
+       style="fill:#aaaaaa;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath2-30)"
+       d="M 0,0 H 560.90358 V 522.9534 H 0 Z"
+       id="path2232"
+       transform="matrix(0.29691799,0,0,0.29691799,41.8987,130.55344)" />
+    <rect
+       style="fill:#2B2B2B;stroke:none;stroke-width:0.202696"
+       id="rect2529"
+       width="149.04575"
+       height="16.391005"
+       x="27.611116"
+       y="127.39694" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.72222px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917"
+       x="44.673817"
+       y="140.04424"
+       id="text2240"><tspan
+         sodipodi:role="line"
+         x="44.673817"
+         y="140.04424"
+         id="tspan2238"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.72222px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.296917"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.72222px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ab8307;stroke-width:0.296917"
+           id="tspan2236">Top 10</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:700;font-size:5.1775px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917"
+       x="137.29752"
+       y="139.15546"
+       id="text2246"><tspan
+         sodipodi:role="line"
+         x="137.29752"
+         y="139.15546"
+         id="tspan2244"
+         style="stroke-width:0.296917"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:700;font-size:5.1775px;font-family:Arial;fill:#ab8307;stroke-width:0.296917"
+           id="tspan2242">Pontuação</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="155.21942"
+       id="text2252"><tspan
+         sodipodi:role="line"
+         id="tspan1427">p0p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="155.21942"
+       id="text2258"><tspan
+         sodipodi:role="line"
+         id="tspan1453">pontoS0S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="168.51575"
+       id="text2264"><tspan
+         sodipodi:role="line"
+         id="tspan1429">p1p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="168.51575"
+       id="text2270"><tspan
+         sodipodi:role="line"
+         id="tspan1455">pontoS1S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="181.81209"
+       id="text2276"><tspan
+         sodipodi:role="line"
+         id="tspan1431">p2p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="181.81209"
+       id="text2282"><tspan
+         sodipodi:role="line"
+         id="tspan1457">pontoS2S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="195.10844"
+       id="text2288"><tspan
+         sodipodi:role="line"
+         id="tspan1433">p3p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="195.10844"
+       id="text2294"><tspan
+         sodipodi:role="line"
+         id="tspan1459">pontoS3S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="208.40479"
+       id="text2300"><tspan
+         sodipodi:role="line"
+         id="tspan1435">p4p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="208.40479"
+       id="text2306"><tspan
+         sodipodi:role="line"
+         id="tspan1461">pontoS4S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="221.70114"
+       id="text2312"><tspan
+         sodipodi:role="line"
+         id="tspan1437">p5p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="221.70114"
+       id="text2318"><tspan
+         sodipodi:role="line"
+         id="tspan1463">pontoS5S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="234.99748"
+       id="text2324"><tspan
+         sodipodi:role="line"
+         id="tspan1445">p6p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="234.99748"
+       id="text2330"><tspan
+         sodipodi:role="line"
+         id="tspan1465">pontoS6S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="248.29384"
+       id="text2336"><tspan
+         sodipodi:role="line"
+         id="tspan1447">p7p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="248.29384"
+       id="text2342"><tspan
+         sodipodi:role="line"
+         id="tspan1467">pontoS7S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="261.59018"
+       id="text2348"><tspan
+         sodipodi:role="line"
+         id="tspan1449">p8p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="261.59018"
+       id="text2354"><tspan
+         sodipodi:role="line"
+         id="tspan1469">pontoS8S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="45.729847"
+       y="274.88651"
+       id="text2360"><tspan
+         sodipodi:role="line"
+         id="tspan1451">p9p - Palpiteiro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-size:6.08682px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.296917;-inkscape-font-specification:'Arial, Bold';font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
+       x="135.42383"
+       y="274.88651"
+       id="text2366"><tspan
+         sodipodi:role="line"
+         id="tspan1471">pontoS9S</tspan></text>
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68)"
+       d="m 300.56538,0 h 2.27701 v 492.59326 h -2.27701 z"
+       id="path2370"
+       transform="matrix(0.63849654,0,0,0.31428639,-60.767987,130.55344)" />
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68)"
+       d="m 0,43.263199 h 425.04195 v 2.27701 H 0 Z"
+       id="path2372"
+       transform="matrix(0.29942446,0,0,0.54727439,41.8987,119.72222)" />
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68-6)"
+       d="m 300.56538,0 h 2.27701 v 492.59326 h -2.27701 z"
+       id="path2370-0"
+       transform="matrix(0.63849654,0,0,0.31676239,-151.46512,129.79269)" />
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68-1)"
+       d="m 300.56538,0 h 2.27701 v 492.59326 h -2.27701 z"
+       id="path2370-8"
+       transform="matrix(0.63849654,0,0,0.31706952,-22.641987,129.57138)" />
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68-5)"
+       d="m 0,43.263199 h 425.04195 v 2.27701 H 0 Z"
+       id="path2372-5"
+       transform="matrix(0.3060878,0,0,0.54727439,40.338527,105.85581)" />
+    <path
+       style="fill:#af8605;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1-68-10)"
+       d="m 0,43.263199 h 425.04195 v 2.27701 H 0 Z"
+       id="path2372-59"
+       transform="matrix(0.30547109,0,0,0.54727439,40.694208,260.9842)" />
+  </g>
+</svg>

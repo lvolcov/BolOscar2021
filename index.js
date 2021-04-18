@@ -1,4 +1,5 @@
-//http://49.213.81.43/static/tool/thuocbot/node_modules/telegraf/docs/#/
+// http://49.213.81.43/static/tool/thuocbot/node_modules/telegraf/docs/#/
+
 // const { Telegraf } = require('telegraf')
 // const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -7,6 +8,10 @@ const bot = new Composer
 
 
 const answers = require('./functions/answers')
+
+//Closing date set to 26/04/2021 - 00:00 UTC
+const closingTime = new Date(Date.UTC(2021, 3, 26, 00, 00, 0, 0));
+const timeNow = Date.now()
 
 bot.start(async (ctx) => {
     let i = ctx.update.message.message_id < 100 ? 0 : ctx.update.message.message_id - 100
@@ -37,7 +42,14 @@ bot.on('callback_query', async (ctx) => {
         }
     })
 
-    answers[callbackInfo()](ctx)
+    let answer = callbackInfo()
+    const onlyBeforeClosing = ["cat", "ind", "volCategoria", "voted", "resetVotes", "resetVotesYes"]
+
+    if (timeNow > closingTime && onlyBeforeClosing.indexOf(answer) != -1) {
+        answer = "menuInicial"
+    }
+
+    answers[answer](ctx)
 
 })
 

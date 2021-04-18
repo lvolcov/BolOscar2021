@@ -3,7 +3,7 @@ const table = require("table");
 
 const leaguePlayersList = (async (ctx) => {
     const telegramID = ctx.update.callback_query.from.id
-    const info = await sqlFunctions.getLeaguePlayersList(711830627)
+    const info = await sqlFunctions.getLeaguePlayersList(telegramID)
     const listRaw = [['Participante', 'Pontos']]
     info.map((elem, index) => {
         index < 31 ? listRaw.push([String(elem.Nome), String(elem.Pontos)]) : ""

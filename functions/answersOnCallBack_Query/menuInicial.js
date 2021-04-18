@@ -2,6 +2,10 @@ const sqlFunctions = require('../sqlResources/sqlFunctions')
 const db = require('../../db.json');
 
 const menuInicial = (async (ctx) => {
+    //Closing date set to 26/04/2021 - 00:00 UTC
+    const closingTime = new Date(Date.UTC(2021, 3, 26, 00, 00, 0, 0));
+    const timeNow = Date.now()
+
     const telegramID = ctx.update.callback_query.from.id
     let info = await sqlFunctions.getVotes(telegramID)
     const menuInicial = []
@@ -20,16 +24,19 @@ const menuInicial = (async (ctx) => {
     if (String(telegramID) === process.env.TELEGRAM_ID_ALLOWED_1 || String(telegramID) === process.env.TELEGRAM_ID_ALLOWED_2) {
         menuInicial.push([{ text: "Menu Admin", callback_data: "adminMenu" }])
     }
-    if (voted.length === 0) {
-        menuInicial.push([{ text: "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria" }])
-    } else if (voted.length === 23) {
-        menuInicial.push([{ text: "Revisar Palpites", callback_data: "voted" }])
-    } else {
-        menuInicial.push([{ text: "Continuar Palpites", callback_data: "volCategoria" }, { text: "Revisar Palpites", callback_data: "voted" }])
+    let menuSentence = "Palpites encerrados !"
+    if (timeNow < closingTime) {
+        menuSentence = "Escolha uma das opções a seguir:"
+        if (voted.length === 0) {
+            menuInicial.push([{ text: "🎥   Iniciar os Palpites   🎥", callback_data: "volCategoria" }])
+        } else if (voted.length === 23) {
+            menuInicial.push([{ text: "Revisar Palpites", callback_data: "voted" }])
+        } else {
+            menuInicial.push([{ text: "Continuar Palpites", callback_data: "volCategoria" }, { text: "Revisar Palpites", callback_data: "voted" }])
+        }
     }
-
-    menuInicial.push([{ text: "Ligas", callback_data: "leagues" }, { text: "Mais info", callback_data: "moreInfo" }], [{ text: "Compartilhar seus Palpites", callback_data: "shareMenu" }])
-    ctx.telegram.sendMessage(ctx.chat.id, "Escolha uma das opções a seguir:", { reply_markup: { inline_keyboard: menuInicial } })
+    menuInicial.push([{ text: "Ligas", callback_data: "leagues" }, { text: "Mais info", callback_data: "moreInfo" }], [{ text: "Compartilhar seu Bol'Oscar", callback_data: "shareMenu" }])
+    ctx.telegram.sendMessage(ctx.chat.id, menuSentence, { reply_markup: { inline_keyboard: menuInicial } })
 })
 
 module.exports = menuInicial
