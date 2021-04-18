@@ -1,6 +1,6 @@
 const validateAnswer = require('../validateAnswer')
 const sqlFunctions = require('../sqlResources/sqlFunctions')
-const manageOwnLeague = require('../../textsMenus/manageOwnLeague')
+const createLeagueMessage = require('../../textsMenus/createLeagueMessage')
 
 const createLeagueName = (async (ctx) => {
     const messageTextUser = ctx.update.message.text
@@ -23,7 +23,7 @@ const createLeagueName = (async (ctx) => {
                     ctx.telegram.deleteMessage(ctx.chat.id, result.message_id)
                         .then(async (result) => {
                             await ctx.telegram.sendMessage(ctx.chat.id, "Qual será o nome da sua liga?", { reply_markup: { force_reply: true, } })
-                            await ctx.telegram.sendMessage(ctx.chat.id, manageOwnLeague(""), { parse_mode: 'HTML', reply_markup: { inline_keyboard: [[{ text: "Voltar", callback_data: "leagues deleteLastMessage" }]] } })
+                            await ctx.telegram.sendMessage(ctx.chat.id, createLeagueMessage(), { parse_mode: 'HTML', reply_markup: { inline_keyboard: [[{ text: "Voltar", callback_data: "leagues deleteLastMessage" }]] } })
                         })
                         .catch(err => console.log(err))
                 }, 3000)
